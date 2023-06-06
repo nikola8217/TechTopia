@@ -17661,6 +17661,70 @@ function genPropsAccessExp(name) {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Badges.vue?vue&type=script&lang=js":
+/*!*****************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Badges.vue?vue&type=script&lang=js ***!
+  \*****************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: 'Badges'
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Corousel.vue?vue&type=script&lang=js":
+/*!*******************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Corousel.vue?vue&type=script&lang=js ***!
+  \*******************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: 'Corousel'
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/LatestProducts.vue?vue&type=script&lang=js":
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/LatestProducts.vue?vue&type=script&lang=js ***!
+  \*************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: 'LatestProducts'
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Promotions.vue?vue&type=script&lang=js":
+/*!*********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Promotions.vue?vue&type=script&lang=js ***!
+  \*********************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: 'Promotions'
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/shared/Drawer.vue?vue&type=script&lang=js":
 /*!*******************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/shared/Drawer.vue?vue&type=script&lang=js ***!
@@ -17769,7 +17833,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+/* harmony import */ var _components_home_Corousel_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/home/Corousel.vue */ "./resources/js/components/home/Corousel.vue");
+/* harmony import */ var _components_home_Badges_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/home/Badges.vue */ "./resources/js/components/home/Badges.vue");
+/* harmony import */ var _components_home_PopularProducts_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/home/PopularProducts.vue */ "./resources/js/components/home/PopularProducts.vue");
+/* harmony import */ var _components_home_Promotions_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/home/Promotions.vue */ "./resources/js/components/home/Promotions.vue");
+/* harmony import */ var _components_home_LatestProducts_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/home/LatestProducts.vue */ "./resources/js/components/home/LatestProducts.vue");
+
+
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  components: {
+    Corousel: _components_home_Corousel_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    Badges: _components_home_Badges_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    PopularProducts: _components_home_PopularProducts_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
+    Promotions: _components_home_Promotions_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+    LatestProducts: _components_home_LatestProducts_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
+  }
+});
 
 /***/ }),
 
@@ -17812,6 +17894,106 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Badges.vue?vue&type=template&id=3b7d4b85":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Badges.vue?vue&type=template&id=3b7d4b85 ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   render: () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"trusted-section mt-100 overflow-hidden\"><div class=\"trusted-section-inner\"><div class=\"container\"><div class=\"row justify-content-center trusted-row\"><div class=\"col-lg-4 col-md-6 col-12\"><div class=\"trusted-badge bg-trust-1 rounded\"><div class=\"trusted-icon\"><img class=\"icon-trusted\" src=\"asset/img/trusted/1.png\" alt=\"icon-1\"></div><div class=\"trusted-content\"><h2 class=\"heading_18 trusted-heading\">Free Shipping &amp; Return</h2><p class=\"text_16 trusted-subheading trusted-subheading-2\">On all order over $99.00</p></div></div></div><div class=\"col-lg-4 col-md-6 col-12\"><div class=\"trusted-badge bg-trust-2 rounded\"><div class=\"trusted-icon\"><img class=\"icon-trusted\" src=\"asset/img/trusted/2.png\" alt=\"icon-2\"></div><div class=\"trusted-content\"><h2 class=\"heading_18 trusted-heading\">Customer Support 24/7</h2><p class=\"text_16 trusted-subheading trusted-subheading-2\">Instant access to support</p></div></div></div><div class=\"col-lg-4 col-md-6 col-12\"><div class=\"trusted-badge bg-trust-3 rounded\"><div class=\"trusted-icon\"><img class=\"icon-trusted\" src=\"asset/img/trusted/3.png\" alt=\"icon-3\"></div><div class=\"trusted-content\"><h2 class=\"heading_18 trusted-heading\">Discount</h2><p class=\"text_16 trusted-subheading trusted-subheading-2\">20% for enough points!</p></div></div></div></div></div></div></div>", 1);
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" trusted badge start "), _hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" trusted badge end ")], 2112 /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */);
+}
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Corousel.vue?vue&type=template&id=56f40703":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Corousel.vue?vue&type=template&id=56f40703 ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   render: () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"slideshow-section position-relative\"><div class=\"slideshow-active activate-slider\" data-slick=\"{\r\n                    &quot;slidesToShow&quot;: 1, \r\n                    &quot;slidesToScroll&quot;: 1, \r\n                    &quot;dots&quot;: true,\r\n                    &quot;arrows&quot;: true,\r\n                    &quot;responsive&quot;: [\r\n                        {\r\n                        &quot;breakpoint&quot;: 768,\r\n                        &quot;settings&quot;: {\r\n                            &quot;arrows&quot;: false\r\n                        }\r\n                        }\r\n                    ]\r\n                }\"><div class=\"slide-item slide-item-bag position-relative\"><img class=\"slide-img d-none d-md-block\" src=\"asset/img/slideshow/s1.jpg\" alt=\"slide-1\"><img class=\"slide-img d-md-none\" src=\"asset/img/slideshow/s1-m.jpg\" alt=\"slide-1\"><div class=\"content-absolute content-slide\"><div class=\"container height-inherit d-flex align-items-center\"><div class=\"content-box slide-content py-4\"><h2 class=\"slide-heading heading_72 animate__animated animate__fadeInUp\" data-animation=\"animate__animated animate__fadeInUp\"> ZEN VIVID 16 </h2><p class=\"slide-subheading heading_18 animate__animated animate__fadeInUp\" data-animation=\"animate__animated animate__fadeInUp\"> Look for your inspiration here </p><a class=\"btn-primary slide-btn animate__animated animate__fadeInUp\" href=\"collection-left-sidebar.html\" data-animation=\"animate__animated animate__fadeInUp\">SHOP NOW</a></div></div></div></div><div class=\"slide-item slide-item-bag position-relative\"><img class=\"slide-img d-none d-md-block\" src=\"asset/img/slideshow/s2.jpg\" alt=\"slide-2\"><img class=\"slide-img d-md-none\" src=\"asset/images/desk1.png\" alt=\"slide-2\"><div class=\"content-absolute content-slide\"><div class=\"container height-inherit d-flex align-items-center\"><div class=\"content-box slide-content py-4\"><h2 class=\"slide-heading heading_72 animate__animated animate__fadeInUp\" data-animation=\"animate__animated animate__fadeInUp\"> PLEATED HEEL </h2><p class=\"slide-subheading heading_18 animate__animated animate__fadeInUp\" data-animation=\"animate__animated animate__fadeInUp\"> Look for your inspiration here </p><a class=\"btn-primary slide-btn animate__animated animate__fadeInUp\" href=\"collection-left-sidebar.html\" data-animation=\"animate__animated animate__fadeInUp\">SHOP NOW</a></div></div></div></div><div class=\"slide-item slide-item-bag position-relative\"><img class=\"slide-img d-none d-md-block\" src=\"asset/img/slideshow/s3.jpg\" alt=\"slide-3\"><img class=\"slide-img d-md-none\" src=\"asset/images/desk1.png\" alt=\"slide-3\"><div class=\"content-absolute content-slide\"><div class=\"container height-inherit d-flex align-items-center\"><div class=\"content-box slide-content py-4\"><h2 class=\"slide-heading heading_72 animate__animated animate__fadeInUp\" data-animation=\"animate__animated animate__fadeInUp\"> MEN&#39;S SHOES </h2><p class=\"slide-subheading heading_18 animate__animated animate__fadeInUp\" data-animation=\"animate__animated animate__fadeInUp\"> Look for your inspiration here </p><a class=\"btn-primary slide-btn animate__animated animate__fadeInUp\" href=\"collection-left-sidebar.html\" data-animation=\"animate__animated animate__fadeInUp\">SHOP NOW</a></div></div></div></div></div><div class=\"activate-arrows\"></div><div class=\"activate-dots dot-tools\"></div></div>", 1);
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" slideshow start "), _hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" slideshow end ")]);
+}
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/LatestProducts.vue?vue&type=template&id=04b46440":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/LatestProducts.vue?vue&type=template&id=04b46440 ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   render: () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"featured-collection mt-100 overflow-hidden\"><div class=\"collection-tab-inner\"><div class=\"container\"><div class=\"section-header text-center\"><h2 class=\"section-heading\">Latest Arivals</h2></div><div class=\"row\"><div class=\"col-lg-3 col-md-6 col-6\" data-aos=\"fade-up\" data-aos-duration=\"700\"><div class=\"product-card\"><div class=\"product-card-img\"><a class=\"hover-switch\" href=\"collection-left-sidebar.html\"><img class=\"secondary-img\" src=\"asset/img/products/shoe/9.jpg\" alt=\"product-img\"><img class=\"primary-img\" src=\"asset/img/products/shoe/1.jpg\" alt=\"product-img\"></a><div class=\"product-badge\"><span class=\"badge-label badge-new rounded\">Featured</span><span class=\"badge-label badge-percentage rounded\">-44%</span></div><div class=\"product-card-action product-card-action-2 justify-content-center\"><a href=\"#quickview-modal\" class=\"action-card action-quickview\" data-bs-toggle=\"modal\"><svg width=\"26\" height=\"26\" viewBox=\"0 0 26 26\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z\" fill=\"#00234D\"></path></svg></a><a href=\"#\" class=\"action-card action-wishlist\"><svg class=\"icon icon-wishlist\" width=\"26\" height=\"22\" viewBox=\"0 0 26 22\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z\" fill=\"#00234D\"></path></svg></a><a href=\"#\" class=\"action-card action-addtocart\"><svg class=\"icon icon-cart\" width=\"24\" height=\"26\" viewBox=\"0 0 24 26\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z\" fill=\"#00234D\"></path></svg></a></div></div><div class=\"product-card-details\"><ul class=\"color-lists list-unstyled d-flex align-items-center\"><li><a href=\"javascript:void(0)\" class=\"color-swatch swatch-black active\"></a></li><li><a href=\"javascript:void(0)\" class=\"color-swatch swatch-cyan\"></a></li><li><a href=\"javascript:void(0)\" class=\"color-swatch swatch-purple\"></a></li></ul><h3 class=\"product-card-title\"><a href=\"collection-left-sidebar.html\">Macbook Pro</a></h3><div class=\"product-card-price\"><span class=\"card-price-regular\">$1529</span><span class=\"card-price-compare text-decoration-line-through\">$1759</span></div></div></div></div><div class=\"col-lg-3 col-md-6 col-6\" data-aos=\"fade-up\" data-aos-duration=\"700\"><div class=\"product-card\"><div class=\"product-card-img\"><a class=\"hover-switch\" href=\"collection-left-sidebar.html\"><img class=\"secondary-img\" src=\"asset/img/products/shoe/10.jpg\" alt=\"product-img\"><img class=\"primary-img\" src=\"asset/img/products/shoe/2.jpg\" alt=\"product-img\"></a><div class=\"product-card-action product-card-action-2 justify-content-center\"><a href=\"#quickview-modal\" class=\"action-card action-quickview\" data-bs-toggle=\"modal\"><svg width=\"26\" height=\"26\" viewBox=\"0 0 26 26\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z\" fill=\"#00234D\"></path></svg></a><a href=\"#\" class=\"action-card action-wishlist\"><svg class=\"icon icon-wishlist\" width=\"26\" height=\"22\" viewBox=\"0 0 26 22\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z\" fill=\"#00234D\"></path></svg></a><a href=\"#\" class=\"action-card action-addtocart\"><svg class=\"icon icon-cart\" width=\"24\" height=\"26\" viewBox=\"0 0 24 26\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z\" fill=\"#00234D\"></path></svg></a></div></div><div class=\"product-card-details\"><ul class=\"color-lists list-unstyled d-flex align-items-center\"><li><a href=\"javascript:void(0)\" class=\"color-swatch swatch-black active\"></a></li><li><a href=\"javascript:void(0)\" class=\"color-swatch swatch-cyan\"></a></li><li><a href=\"javascript:void(0)\" class=\"color-swatch swatch-purple\"></a></li></ul><h3 class=\"product-card-title\"><a href=\"collection-left-sidebar.html\">Iphone 14 pro</a></h3><div class=\"product-card-price\"><span class=\"card-price-regular\">$1529</span><span class=\"card-price-compare text-decoration-line-through\">$1759</span></div></div></div></div><div class=\"col-lg-3 col-md-6 col-6\" data-aos=\"fade-up\" data-aos-duration=\"700\"><div class=\"product-card\"><div class=\"product-card-img\"><a class=\"hover-switch\" href=\"collection-left-sidebar.html\"><img class=\"secondary-img\" src=\"asset/img/products/shoe/11.jpg\" alt=\"product-img\"><img class=\"primary-img\" src=\"asset/img/products/shoe/3.jpg\" alt=\"product-img\"></a><div class=\"product-badge\"><span class=\"badge-label badge-new rounded\">New</span></div><div class=\"product-card-action product-card-action-2 justify-content-center\"><a href=\"#quickview-modal\" class=\"action-card action-quickview\" data-bs-toggle=\"modal\"><svg width=\"26\" height=\"26\" viewBox=\"0 0 26 26\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z\" fill=\"#00234D\"></path></svg></a><a href=\"#\" class=\"action-card action-wishlist\"><svg class=\"icon icon-wishlist\" width=\"26\" height=\"22\" viewBox=\"0 0 26 22\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z\" fill=\"#00234D\"></path></svg></a><a href=\"#\" class=\"action-card action-addtocart\"><svg class=\"icon icon-cart\" width=\"24\" height=\"26\" viewBox=\"0 0 24 26\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z\" fill=\"#00234D\"></path></svg></a></div></div><div class=\"product-card-details\"><ul class=\"color-lists list-unstyled d-flex align-items-center\"><li><a href=\"javascript:void(0)\" class=\"color-swatch swatch-black active\"></a></li><li><a href=\"javascript:void(0)\" class=\"color-swatch swatch-cyan\"></a></li><li><a href=\"javascript:void(0)\" class=\"color-swatch swatch-purple\"></a></li></ul><h3 class=\"product-card-title\"><a href=\"collection-left-sidebar.html\">Playstation 5</a></h3><div class=\"product-card-price\"><span class=\"card-price-regular\">$1529</span><span class=\"card-price-compare text-decoration-line-through\">$1759</span></div></div></div></div><div class=\"col-lg-3 col-md-6 col-6\" data-aos=\"fade-up\" data-aos-duration=\"700\"><div class=\"product-card\"><div class=\"product-card-img\"><a class=\"hover-switch\" href=\"collection-left-sidebar.html\"><img class=\"secondary-img\" src=\"asset/img/products/shoe/14.jpg\" alt=\"product-img\"><img class=\"primary-img\" src=\"asset/img/products/shoe/4.jpg\" alt=\"product-img\"></a><div class=\"product-card-action product-card-action-2 justify-content-center\"><a href=\"#quickview-modal\" class=\"action-card action-quickview\" data-bs-toggle=\"modal\"><svg width=\"26\" height=\"26\" viewBox=\"0 0 26 26\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z\" fill=\"#00234D\"></path></svg></a><a href=\"#\" class=\"action-card action-wishlist\"><svg class=\"icon icon-wishlist\" width=\"26\" height=\"22\" viewBox=\"0 0 26 22\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z\" fill=\"#00234D\"></path></svg></a><a href=\"#\" class=\"action-card action-addtocart\"><svg class=\"icon icon-cart\" width=\"24\" height=\"26\" viewBox=\"0 0 24 26\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z\" fill=\"#00234D\"></path></svg></a></div></div><div class=\"product-card-details\"><ul class=\"color-lists list-unstyled d-flex align-items-center\"><li><a href=\"javascript:void(0)\" class=\"color-swatch swatch-black active\"></a></li><li><a href=\"javascript:void(0)\" class=\"color-swatch swatch-cyan\"></a></li><li><a href=\"javascript:void(0)\" class=\"color-swatch swatch-purple\"></a></li></ul><h3 class=\"product-card-title\"><a href=\"collection-left-sidebar.html\">Samsung Galaxy S23</a></h3><div class=\"product-card-price\"><span class=\"card-price-regular\">$1529</span><span class=\"card-price-compare text-decoration-line-through\">$1759</span></div></div></div></div></div><div class=\"view-all text-center\" data-aos=\"fade-up\" data-aos-duration=\"700\"><a class=\"btn-primary\" href=\"#\">VIEW ALL</a></div></div></div></div>", 1);
+var _hoisted_2 = [_hoisted_1];
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, _hoisted_2);
+}
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/PopularProducts.vue?vue&type=template&id=28bd8858":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/PopularProducts.vue?vue&type=template&id=28bd8858 ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   render: () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"featured-collection mt-100 overflow-hidden\"><div class=\"collection-tab-inner\"><div class=\"container\"><div class=\"section-header text-center\"><h2 class=\"section-heading\">Popular Products</h2></div><div class=\"row\"><div class=\"col-lg-3 col-md-6 col-6\" data-aos=\"fade-up\" data-aos-duration=\"700\"><div class=\"product-card\"><div class=\"product-card-img\"><a class=\"hover-switch\" href=\"collection-left-sidebar.html\"><img class=\"secondary-img\" src=\"asset/img/products/shoe/9.jpg\" alt=\"product-img\"><img class=\"primary-img\" src=\"asset/img/products/shoe/1.jpg\" alt=\"product-img\"></a><div class=\"product-badge\"><span class=\"badge-label badge-new rounded\">Featured</span><span class=\"badge-label badge-percentage rounded\">-44%</span></div><div class=\"product-card-action product-card-action-2 justify-content-center\"><a href=\"#quickview-modal\" class=\"action-card action-quickview\" data-bs-toggle=\"modal\"><svg width=\"26\" height=\"26\" viewBox=\"0 0 26 26\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z\" fill=\"#00234D\"></path></svg></a><a href=\"#\" class=\"action-card action-wishlist\"><svg class=\"icon icon-wishlist\" width=\"26\" height=\"22\" viewBox=\"0 0 26 22\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z\" fill=\"#00234D\"></path></svg></a><a href=\"#\" class=\"action-card action-addtocart\"><svg class=\"icon icon-cart\" width=\"24\" height=\"26\" viewBox=\"0 0 24 26\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z\" fill=\"#00234D\"></path></svg></a></div></div><div class=\"product-card-details\"><ul class=\"color-lists list-unstyled d-flex align-items-center\"><li><a href=\"javascript:void(0)\" class=\"color-swatch swatch-black active\"></a></li><li><a href=\"javascript:void(0)\" class=\"color-swatch swatch-cyan\"></a></li><li><a href=\"javascript:void(0)\" class=\"color-swatch swatch-purple\"></a></li></ul><h3 class=\"product-card-title\"><a href=\"collection-left-sidebar.html\">Macbook Pro</a></h3><div class=\"product-card-price\"><span class=\"card-price-regular\">$1529</span><span class=\"card-price-compare text-decoration-line-through\">$1759</span></div></div></div></div><div class=\"col-lg-3 col-md-6 col-6\" data-aos=\"fade-up\" data-aos-duration=\"700\"><div class=\"product-card\"><div class=\"product-card-img\"><a class=\"hover-switch\" href=\"collection-left-sidebar.html\"><img class=\"secondary-img\" src=\"asset/img/products/shoe/10.jpg\" alt=\"product-img\"><img class=\"primary-img\" src=\"asset/img/products/shoe/2.jpg\" alt=\"product-img\"></a><div class=\"product-card-action product-card-action-2 justify-content-center\"><a href=\"#quickview-modal\" class=\"action-card action-quickview\" data-bs-toggle=\"modal\"><svg width=\"26\" height=\"26\" viewBox=\"0 0 26 26\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z\" fill=\"#00234D\"></path></svg></a><a href=\"#\" class=\"action-card action-wishlist\"><svg class=\"icon icon-wishlist\" width=\"26\" height=\"22\" viewBox=\"0 0 26 22\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z\" fill=\"#00234D\"></path></svg></a><a href=\"#\" class=\"action-card action-addtocart\"><svg class=\"icon icon-cart\" width=\"24\" height=\"26\" viewBox=\"0 0 24 26\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z\" fill=\"#00234D\"></path></svg></a></div></div><div class=\"product-card-details\"><ul class=\"color-lists list-unstyled d-flex align-items-center\"><li><a href=\"javascript:void(0)\" class=\"color-swatch swatch-black active\"></a></li><li><a href=\"javascript:void(0)\" class=\"color-swatch swatch-cyan\"></a></li><li><a href=\"javascript:void(0)\" class=\"color-swatch swatch-purple\"></a></li></ul><h3 class=\"product-card-title\"><a href=\"collection-left-sidebar.html\">Iphone 14 pro</a></h3><div class=\"product-card-price\"><span class=\"card-price-regular\">$1529</span><span class=\"card-price-compare text-decoration-line-through\">$1759</span></div></div></div></div><div class=\"col-lg-3 col-md-6 col-6\" data-aos=\"fade-up\" data-aos-duration=\"700\"><div class=\"product-card\"><div class=\"product-card-img\"><a class=\"hover-switch\" href=\"collection-left-sidebar.html\"><img class=\"secondary-img\" src=\"asset/img/products/shoe/11.jpg\" alt=\"product-img\"><img class=\"primary-img\" src=\"asset/img/products/shoe/3.jpg\" alt=\"product-img\"></a><div class=\"product-badge\"><span class=\"badge-label badge-new rounded\">New</span></div><div class=\"product-card-action product-card-action-2 justify-content-center\"><a href=\"#quickview-modal\" class=\"action-card action-quickview\" data-bs-toggle=\"modal\"><svg width=\"26\" height=\"26\" viewBox=\"0 0 26 26\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z\" fill=\"#00234D\"></path></svg></a><a href=\"#\" class=\"action-card action-wishlist\"><svg class=\"icon icon-wishlist\" width=\"26\" height=\"22\" viewBox=\"0 0 26 22\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z\" fill=\"#00234D\"></path></svg></a><a href=\"#\" class=\"action-card action-addtocart\"><svg class=\"icon icon-cart\" width=\"24\" height=\"26\" viewBox=\"0 0 24 26\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z\" fill=\"#00234D\"></path></svg></a></div></div><div class=\"product-card-details\"><ul class=\"color-lists list-unstyled d-flex align-items-center\"><li><a href=\"javascript:void(0)\" class=\"color-swatch swatch-black active\"></a></li><li><a href=\"javascript:void(0)\" class=\"color-swatch swatch-cyan\"></a></li><li><a href=\"javascript:void(0)\" class=\"color-swatch swatch-purple\"></a></li></ul><h3 class=\"product-card-title\"><a href=\"collection-left-sidebar.html\">Playstation 5</a></h3><div class=\"product-card-price\"><span class=\"card-price-regular\">$1529</span><span class=\"card-price-compare text-decoration-line-through\">$1759</span></div></div></div></div><div class=\"col-lg-3 col-md-6 col-6\" data-aos=\"fade-up\" data-aos-duration=\"700\"><div class=\"product-card\"><div class=\"product-card-img\"><a class=\"hover-switch\" href=\"collection-left-sidebar.html\"><img class=\"secondary-img\" src=\"asset/img/products/shoe/14.jpg\" alt=\"product-img\"><img class=\"primary-img\" src=\"asset/img/products/shoe/4.jpg\" alt=\"product-img\"></a><div class=\"product-card-action product-card-action-2 justify-content-center\"><a href=\"#quickview-modal\" class=\"action-card action-quickview\" data-bs-toggle=\"modal\"><svg width=\"26\" height=\"26\" viewBox=\"0 0 26 26\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z\" fill=\"#00234D\"></path></svg></a><a href=\"#\" class=\"action-card action-wishlist\"><svg class=\"icon icon-wishlist\" width=\"26\" height=\"22\" viewBox=\"0 0 26 22\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z\" fill=\"#00234D\"></path></svg></a><a href=\"#\" class=\"action-card action-addtocart\"><svg class=\"icon icon-cart\" width=\"24\" height=\"26\" viewBox=\"0 0 24 26\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z\" fill=\"#00234D\"></path></svg></a></div></div><div class=\"product-card-details\"><ul class=\"color-lists list-unstyled d-flex align-items-center\"><li><a href=\"javascript:void(0)\" class=\"color-swatch swatch-black active\"></a></li><li><a href=\"javascript:void(0)\" class=\"color-swatch swatch-cyan\"></a></li><li><a href=\"javascript:void(0)\" class=\"color-swatch swatch-purple\"></a></li></ul><h3 class=\"product-card-title\"><a href=\"collection-left-sidebar.html\">Samsung Galaxy S23</a></h3><div class=\"product-card-price\"><span class=\"card-price-regular\">$1529</span><span class=\"card-price-compare text-decoration-line-through\">$1759</span></div></div></div></div></div><div class=\"view-all text-center\" data-aos=\"fade-up\" data-aos-duration=\"700\"><a class=\"btn-primary\" href=\"#\">VIEW ALL</a></div></div></div></div>", 1);
+function render(_ctx, _cache) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" collection start "), _hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" collection end ")]);
+}
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Promotions.vue?vue&type=template&id=1aa937f6":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Promotions.vue?vue&type=template&id=1aa937f6 ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   render: () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+var _hoisted_1 = {
+  "class": "banner-section mt-100 overflow-hidden"
+};
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"banner-section-inner\"><div class=\"container\"><div class=\"row justify-content-center\"><div class=\"col-lg-6 col-md-6 col-12\" data-aos=\"fade-right\" data-aos-duration=\"1200\"><a class=\"banner-item position-relative rounded\" href=\"collection-left-sidebar.html\"><img class=\"banner-img\" src=\"asset/img/banner/shoe-1.jpg\" alt=\"banner-1\"><div class=\"content-absolute content-slide\"><div class=\"container height-inherit d-flex align-items-center\"><div class=\"content-box banner-content p-4\"><p class=\"heading_18 mb-3 text-white\">Apple</p><h2 class=\"heading_34 text-white\">15% off for <br>Apple products</h2></div></div></div></a></div><div class=\"col-lg-6 col-md-6 col-12\" data-aos=\"fade-left\" data-aos-duration=\"1200\"><a class=\"banner-item position-relative rounded\" href=\"collection-left-sidebar.html\"><img class=\"banner-img\" src=\"asset/img/banner/shoe-2.jpg\" alt=\"banner-2\"><div class=\"content-absolute content-slide\"><div class=\"container height-inherit d-flex align-items-center\"><div class=\"content-box banner-content p-4\"><p class=\"heading_18 mb-3 text-white\">Playstation</p><h2 class=\"heading_34 text-white\">25% off for <br>Playstation products</h2></div></div></div></a></div></div></div></div>", 1);
+var _hoisted_3 = [_hoisted_2];
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, _hoisted_3);
+}
 
 /***/ }),
 
@@ -18153,10 +18335,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
-var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", null, "Home page", -1 /* HOISTED */);
-var _hoisted_2 = [_hoisted_1];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, _hoisted_2);
+  var _component_Corousel = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Corousel");
+  var _component_Badges = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Badges");
+  var _component_Promotions = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Promotions");
+  var _component_LatestProducts = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("LatestProducts");
+  var _component_PopularProducts = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("PopularProducts");
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Corousel), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Badges), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Promotions), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_LatestProducts), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_PopularProducts)]);
 }
 
 /***/ }),
@@ -18334,6 +18519,139 @@ exports["default"] = (sfc, props) => {
     return target;
 };
 
+
+/***/ }),
+
+/***/ "./resources/js/components/home/Badges.vue":
+/*!*************************************************!*\
+  !*** ./resources/js/components/home/Badges.vue ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Badges_vue_vue_type_template_id_3b7d4b85__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Badges.vue?vue&type=template&id=3b7d4b85 */ "./resources/js/components/home/Badges.vue?vue&type=template&id=3b7d4b85");
+/* harmony import */ var _Badges_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Badges.vue?vue&type=script&lang=js */ "./resources/js/components/home/Badges.vue?vue&type=script&lang=js");
+/* harmony import */ var C_Users_info_Desktop_javascript_zavrsniRad2023_techtopia_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+
+
+
+;
+const __exports__ = /*#__PURE__*/(0,C_Users_info_Desktop_javascript_zavrsniRad2023_techtopia_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Badges_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Badges_vue_vue_type_template_id_3b7d4b85__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/home/Badges.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
+/***/ "./resources/js/components/home/Corousel.vue":
+/*!***************************************************!*\
+  !*** ./resources/js/components/home/Corousel.vue ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Corousel_vue_vue_type_template_id_56f40703__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Corousel.vue?vue&type=template&id=56f40703 */ "./resources/js/components/home/Corousel.vue?vue&type=template&id=56f40703");
+/* harmony import */ var _Corousel_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Corousel.vue?vue&type=script&lang=js */ "./resources/js/components/home/Corousel.vue?vue&type=script&lang=js");
+/* harmony import */ var C_Users_info_Desktop_javascript_zavrsniRad2023_techtopia_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+
+
+
+;
+const __exports__ = /*#__PURE__*/(0,C_Users_info_Desktop_javascript_zavrsniRad2023_techtopia_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Corousel_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Corousel_vue_vue_type_template_id_56f40703__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/home/Corousel.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
+/***/ "./resources/js/components/home/LatestProducts.vue":
+/*!*********************************************************!*\
+  !*** ./resources/js/components/home/LatestProducts.vue ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _LatestProducts_vue_vue_type_template_id_04b46440__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./LatestProducts.vue?vue&type=template&id=04b46440 */ "./resources/js/components/home/LatestProducts.vue?vue&type=template&id=04b46440");
+/* harmony import */ var _LatestProducts_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LatestProducts.vue?vue&type=script&lang=js */ "./resources/js/components/home/LatestProducts.vue?vue&type=script&lang=js");
+/* harmony import */ var C_Users_info_Desktop_javascript_zavrsniRad2023_techtopia_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+
+
+
+;
+const __exports__ = /*#__PURE__*/(0,C_Users_info_Desktop_javascript_zavrsniRad2023_techtopia_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_LatestProducts_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_LatestProducts_vue_vue_type_template_id_04b46440__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/home/LatestProducts.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
+/***/ "./resources/js/components/home/PopularProducts.vue":
+/*!**********************************************************!*\
+  !*** ./resources/js/components/home/PopularProducts.vue ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _PopularProducts_vue_vue_type_template_id_28bd8858__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PopularProducts.vue?vue&type=template&id=28bd8858 */ "./resources/js/components/home/PopularProducts.vue?vue&type=template&id=28bd8858");
+/* harmony import */ var C_Users_info_Desktop_javascript_zavrsniRad2023_techtopia_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+const script = {}
+
+;
+const __exports__ = /*#__PURE__*/(0,C_Users_info_Desktop_javascript_zavrsniRad2023_techtopia_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_1__["default"])(script, [['render',_PopularProducts_vue_vue_type_template_id_28bd8858__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/home/PopularProducts.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
+/***/ "./resources/js/components/home/Promotions.vue":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/home/Promotions.vue ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Promotions_vue_vue_type_template_id_1aa937f6__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Promotions.vue?vue&type=template&id=1aa937f6 */ "./resources/js/components/home/Promotions.vue?vue&type=template&id=1aa937f6");
+/* harmony import */ var _Promotions_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Promotions.vue?vue&type=script&lang=js */ "./resources/js/components/home/Promotions.vue?vue&type=script&lang=js");
+/* harmony import */ var C_Users_info_Desktop_javascript_zavrsniRad2023_techtopia_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+
+
+
+;
+const __exports__ = /*#__PURE__*/(0,C_Users_info_Desktop_javascript_zavrsniRad2023_techtopia_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Promotions_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Promotions_vue_vue_type_template_id_1aa937f6__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/home/Promotions.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
 
 /***/ }),
 
@@ -18607,6 +18925,66 @@ if (false) {}
 
 /***/ }),
 
+/***/ "./resources/js/components/home/Badges.vue?vue&type=script&lang=js":
+/*!*************************************************************************!*\
+  !*** ./resources/js/components/home/Badges.vue?vue&type=script&lang=js ***!
+  \*************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Badges_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Badges_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Badges.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Badges.vue?vue&type=script&lang=js");
+ 
+
+/***/ }),
+
+/***/ "./resources/js/components/home/Corousel.vue?vue&type=script&lang=js":
+/*!***************************************************************************!*\
+  !*** ./resources/js/components/home/Corousel.vue?vue&type=script&lang=js ***!
+  \***************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Corousel_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Corousel_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Corousel.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Corousel.vue?vue&type=script&lang=js");
+ 
+
+/***/ }),
+
+/***/ "./resources/js/components/home/LatestProducts.vue?vue&type=script&lang=js":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/components/home/LatestProducts.vue?vue&type=script&lang=js ***!
+  \*********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_LatestProducts_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_LatestProducts_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./LatestProducts.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/LatestProducts.vue?vue&type=script&lang=js");
+ 
+
+/***/ }),
+
+/***/ "./resources/js/components/home/Promotions.vue?vue&type=script&lang=js":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/components/home/Promotions.vue?vue&type=script&lang=js ***!
+  \*****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Promotions_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Promotions_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Promotions.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Promotions.vue?vue&type=script&lang=js");
+ 
+
+/***/ }),
+
 /***/ "./resources/js/components/shared/Drawer.vue?vue&type=script&lang=js":
 /*!***************************************************************************!*\
   !*** ./resources/js/components/shared/Drawer.vue?vue&type=script&lang=js ***!
@@ -18754,6 +19132,81 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Register_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Register.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/pages/Register.vue?vue&type=script&lang=js");
  
+
+/***/ }),
+
+/***/ "./resources/js/components/home/Badges.vue?vue&type=template&id=3b7d4b85":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/components/home/Badges.vue?vue&type=template&id=3b7d4b85 ***!
+  \*******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   render: () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Badges_vue_vue_type_template_id_3b7d4b85__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Badges_vue_vue_type_template_id_3b7d4b85__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Badges.vue?vue&type=template&id=3b7d4b85 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Badges.vue?vue&type=template&id=3b7d4b85");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/home/Corousel.vue?vue&type=template&id=56f40703":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/components/home/Corousel.vue?vue&type=template&id=56f40703 ***!
+  \*********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   render: () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Corousel_vue_vue_type_template_id_56f40703__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Corousel_vue_vue_type_template_id_56f40703__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Corousel.vue?vue&type=template&id=56f40703 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Corousel.vue?vue&type=template&id=56f40703");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/home/LatestProducts.vue?vue&type=template&id=04b46440":
+/*!***************************************************************************************!*\
+  !*** ./resources/js/components/home/LatestProducts.vue?vue&type=template&id=04b46440 ***!
+  \***************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   render: () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_LatestProducts_vue_vue_type_template_id_04b46440__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_LatestProducts_vue_vue_type_template_id_04b46440__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./LatestProducts.vue?vue&type=template&id=04b46440 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/LatestProducts.vue?vue&type=template&id=04b46440");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/home/PopularProducts.vue?vue&type=template&id=28bd8858":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/components/home/PopularProducts.vue?vue&type=template&id=28bd8858 ***!
+  \****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   render: () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_PopularProducts_vue_vue_type_template_id_28bd8858__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_PopularProducts_vue_vue_type_template_id_28bd8858__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./PopularProducts.vue?vue&type=template&id=28bd8858 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/PopularProducts.vue?vue&type=template&id=28bd8858");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/home/Promotions.vue?vue&type=template&id=1aa937f6":
+/*!***********************************************************************************!*\
+  !*** ./resources/js/components/home/Promotions.vue?vue&type=template&id=1aa937f6 ***!
+  \***********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   render: () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Promotions_vue_vue_type_template_id_1aa937f6__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Promotions_vue_vue_type_template_id_1aa937f6__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Promotions.vue?vue&type=template&id=1aa937f6 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Promotions.vue?vue&type=template&id=1aa937f6");
+
 
 /***/ }),
 
