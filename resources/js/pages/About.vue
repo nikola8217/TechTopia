@@ -1,11 +1,15 @@
 <template>
   <div>
-    <h1>About page</h1>
+    <AboutUs />
   </div>
 </template>
 
 <script>
+import AboutUs from '../components/about/AboutUs.vue';
+
 export default {
-  
+  components: {
+    AboutUs,
+  }
 }
 </script>
