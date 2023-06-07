@@ -16,22 +16,22 @@
                             <nav class="site-navigation">
                                 <ul class="main-menu list-unstyled justify-content-center">
                                     <li class="menu-list-item nav-item">
-                                        <router-link to="/" class="nav-link">Home</router-link>
+                                        <a :href="$router.resolve({name: 'home'}).href" class="nav-link">Home</a>
                                     </li>
                                     <li class="menu-list-item nav-item">
-                                        <router-link to="/about" class="nav-link">About</router-link>
+                                        <a :href="$router.resolve({name: 'about'}).href" class="nav-link">About</a>
                                     </li>
                                     <li class="menu-list-item nav-item">
-                                        <router-link to="/products" class="nav-link">Products</router-link>
+                                        <a :href="$router.resolve({name: 'products'}).href" class="nav-link">Products</a>
                                     </li>
                                     <li class="menu-list-item nav-item">
-                                        <router-link to="/blog" class="nav-link">Blog</router-link>
+                                        <a :href="$router.resolve({name: 'blog'}).href" class="nav-link">Blog</a>
                                     </li>
                                     <li class="menu-list-item nav-item">
-                                        <router-link to="/contact" class="nav-link">Contact</router-link>
+                                        <a :href="$router.resolve({name: 'contact'}).href" class="nav-link">Contact</a>
                                     </li>
                                     <li class="menu-list-item nav-item">
-                                        <router-link to="/login" class="nav-link">Login</router-link>
+                                        <a :href="$router.resolve({name: 'login'}).href" class="nav-link">Login</a>
                                     </li>
                                 </ul>
                             </nav>
