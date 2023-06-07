@@ -73,6 +73,7 @@
                 <div class="body-wrapper">
                     <router-view></router-view>
                 </div>
+                <footer-component></footer-component>
             </div>
                 
         
