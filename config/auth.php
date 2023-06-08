@@ -40,6 +40,10 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'jwt' => [
+            'driver' => 'jwt',
+            'provider' => 'users',
+        ],
     ],
 
     /*
@@ -64,12 +68,8 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
-
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
     ],
+    
 
     /*
     |--------------------------------------------------------------------------
@@ -107,5 +107,9 @@ return [
     */
 
     'password_timeout' => 10800,
+
+    'aliases' => [
+        'JWTAuth' => Tymon\JWTAuth\Facades\JWTAuth::class,
+    ],
 
 ];
