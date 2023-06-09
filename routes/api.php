@@ -5,21 +5,29 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\api\AuthController;
 use App\Http\Controllers\api\CategoryController;
 use App\Http\Controllers\api\ProductController;
+use App\Http\Controllers\api\BlogController;
 
 Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
 Route::get('categories', [CategoryController::class, 'getCategories']);
 Route::get('products', [ProductController::class, 'getProducts']);
 Route::get('products/{id}', [ProductController::class, 'getProduct']);
+Route::get('blogs', [BlogController::class, 'getBlogs']);
+Route::get('blogs/{id}', [BlogController::class, 'getBlog']);
 
 Route::group(['middleware' => 'jwt.auth'], function () {
+    // categories 
     Route::post('categories', [CategoryController::class, 'createCategory']);
     Route::put('categories/{id}', [CategoryController::class, 'editCategory']);
     Route::delete('categories/{id}', [CategoryController::class, 'deleteCategory']);
-
+    // products 
     Route::post('products', [ProductController::class, 'createProduct']);
     Route::put('products/{id}', [ProductController::class, 'editProduct']);
     Route::delete('products/{id}', [ProductController::class, 'deleteProduct']);
+    // blogs 
+    Route::post('blogs', [BlogController::class, 'createBlog']);
+    Route::put('blogs/{id}', [BlogController::class, 'editBlog']);
+    Route::delete('blogs/{id}', [BlogController::class, 'deleteBlog']);
    
 });
 
