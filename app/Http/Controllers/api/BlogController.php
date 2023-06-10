@@ -27,8 +27,7 @@ class BlogController extends Controller
         $blogs = Blog::getBlogs();
 
         return response()->json([
-            'blogs' => $blogs
-            
+            'blogs' => $blogs 
         ]);
     }
 

@@ -9,6 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Support\Facades\Hash;
 use Tymon\JWTAuth\Contracts\JWTSubject;
+use Illuminate\Support\Facades\DB;
 
 class User extends Authenticatable implements JWTSubject
 {
@@ -65,6 +66,30 @@ class User extends Authenticatable implements JWTSubject
             'password' => Hash::make($password),
             'points' => 0
         
+        ]);
+    }
+
+    public static function getUsers() {
+        return DB::table('users')
+        ->join('users_roles', 'users.id', '=', 'users_roles.user_id')
+        ->join('roles', 'users_roles.role_id', '=', 'roles.id')
+        ->select('users.id AS user_id', 'users.name AS name', 'users.email AS email', 'users.points AS points', 'roles.id AS role_id', 'roles.name AS role_name')
+        ->get();
+    }
+
+    public static function getUser($id) {
+        return DB::table('users')
+        ->join('users_roles', 'users.id', '=', 'users_roles.user_id')
+        ->join('roles', 'users_roles.role_id', '=', 'roles.id')
+        ->where('users.id', $id)
+        ->select('users.id AS user_id', 'users.name AS name', 'users.email AS email', 'users.points AS points', 'roles.id AS role_id', 'roles.name AS role_name')
+        ->first();
+    }
+
+    public static function editUser($id, $name, $email) {
+        return User::where('id', $id)->update([
+            'name' => $name,
+            'email' => $email
         ]);
     }
 }
