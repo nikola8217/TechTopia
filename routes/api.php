@@ -6,6 +6,7 @@ use App\Http\Controllers\api\AuthController;
 use App\Http\Controllers\api\CategoryController;
 use App\Http\Controllers\api\ProductController;
 use App\Http\Controllers\api\BlogController;
+use App\Http\Controllers\api\CommentController;
 
 Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
@@ -28,6 +29,9 @@ Route::group(['middleware' => 'jwt.auth'], function () {
     Route::post('blogs', [BlogController::class, 'createBlog']);
     Route::put('blogs/{id}', [BlogController::class, 'editBlog']);
     Route::delete('blogs/{id}', [BlogController::class, 'deleteBlog']);
+    // products 
+    Route::post('comments/{blog_id}', [CommentController::class, 'createCommentBlog']);
+    Route::post('comments/{product_id}', [CommentController::class, 'createCommentProduct']);
    
 });
 
