@@ -16,9 +16,9 @@ class RegisterAction {
             'password_confirmation' => 'required',
         ]);
     
-        if ($validator->fails()) return response()->json(['error' => $validator->errors()->first()], 400);
+        if ($validator->fails()) return response()->json(['error' => $validator->errors()->first()]);
     
-        if (User::where('email', '=', $request->email)->first()) return response()->json(['error' => 'Email is already taken!'], 400);
+        if (User::where('email', '=', $request->email)->first()) return response()->json(['error' => 'Email is already taken!']);
         
         $user = User::register($request->name, $request->email, $request->password);
         $userRole = UserRole::createUserRole($user->id, 1);

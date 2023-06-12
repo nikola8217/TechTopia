@@ -9,6 +9,7 @@ const router = createRouter({
   routes
 });
 
+
 const app = createApp({});
 
 app.component('header-component', Header);
