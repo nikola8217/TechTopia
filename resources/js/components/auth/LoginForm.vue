@@ -1,7 +1,7 @@
 <template>
     <div class="login-page mt-100">
         <div class="container">
-            <form action="#" class="login-form common-form mx-auto">
+            <form action="#" class="login-form common-form mx-auto" @submit="login">
                 <div class="section-header mb-3">
                     <h2 class="section-heading text-center">Login</h2>
                 </div>
@@ -9,13 +9,13 @@
                     <div class="col-12">
                         <fieldset>
                             <label class="label">Email address</label>
-                            <input type="email" />
+                            <input type="email" v-model="email" />
                         </fieldset>
                     </div>
                     <div class="col-12">
                         <fieldset>
                             <label class="label">Password</label>
-                            <input type="password" />
+                            <input type="password" v-model="password" />
                         </fieldset>
                     </div>
                     <div class="col-12 mt-3">
@@ -30,7 +30,49 @@
 </template>
 
 <script>
+import axios from 'axios';
+import Swal from 'sweetalert2';
+
 export default {
-    name: 'LoginForm'
+    name: 'LoginForm',
+    data() {
+        return {
+            email: '',
+            password: '',
+        }
+    }, 
+    methods: {
+        async login(e) {
+            e.preventDefault();
+            await axios.post('api/login', {
+                email: this.email,
+                password: this.password,
+            }).then((response) => {
+                if(response.data.error){    
+                    Swal.fire({
+                        icon: 'error',
+                        text: response.data.error,
+                    });
+                }
+                else {                                                                      
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Success',
+                        text: response.data.success,
+                    }).then(value => {
+                        if(value.isConfirmed){
+                            localStorage.setItem('token', response.data.token);
+                            localStorage.setItem('user_id', response.data.user.id);
+                            localStorage.setItem('role_id', response.data.role_id);
+                            window.location.href = '/';
+                        }
+                    });
+                }                   
+            }).catch((error) => {
+                console.log(error);
+            });
+        }
+    }
+    
 }
 </script>

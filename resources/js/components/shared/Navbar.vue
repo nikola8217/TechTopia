@@ -14,7 +14,38 @@
                         </div>
                         <div class="col-lg-6 d-lg-block d-none">
                             <nav class="site-navigation">
-                                <ul class="main-menu list-unstyled justify-content-center">
+                                <ul v-if="role_id && role_id === '1'" class="main-menu list-unstyled justify-content-center">
+                                    <li class="menu-list-item nav-item">
+                                        <a :href="$router.resolve({name: 'home'}).href" class="nav-link">Home</a>
+                                    </li>
+                                    <li class="menu-list-item nav-item">
+                                        <a :href="$router.resolve({name: 'about'}).href" class="nav-link">About</a>
+                                    </li>
+                                    <li class="menu-list-item nav-item">
+                                        <a :href="$router.resolve({name: 'products'}).href" class="nav-link">Products</a>
+                                    </li>
+                                    <li class="menu-list-item nav-item">
+                                        <a :href="$router.resolve({name: 'blog'}).href" class="nav-link">Blog</a>
+                                    </li>
+                                    <li class="menu-list-item nav-item">
+                                        <a :href="$router.resolve({name: 'contact'}).href" class="nav-link">Contact</a>
+                                    </li>
+                                    <li class="menu-list-item nav-item">
+                                        <a @click="logout" class="nav-link">Logout</a>
+                                    </li>
+                                </ul>
+                                <ul v-else-if="role_id && role_id === '2'" class="main-menu list-unstyled justify-content-center">
+                                    <li class="menu-list-item nav-item">
+                                        <a :href="$router.resolve({name: 'blog'}).href" class="nav-link">Users</a>
+                                    </li>
+                                    <li class="menu-list-item nav-item">
+                                        <a :href="$router.resolve({name: 'contact'}).href" class="nav-link">Categories</a>
+                                    </li>
+                                    <li class="menu-list-item nav-item">
+                                        <a :href="$router.resolve({name: 'login'}).href" class="nav-link">Logout</a>
+                                    </li>
+                                </ul>
+                                <ul v-else class="main-menu list-unstyled justify-content-center"> 
                                     <li class="menu-list-item nav-item">
                                         <a :href="$router.resolve({name: 'home'}).href" class="nav-link">Home</a>
                                     </li>
@@ -71,6 +102,20 @@
 
 <script>
 export default {
-    name: 'Navbar'
+    name: 'Navbar',
+    mounted() {
+        console.log(this.role_id, typeof this.role_id)
+    },
+    data() {
+        return {
+            role_id: localStorage.getItem('role_id') ? localStorage.getItem('role_id') : null
+        }
+    },
+    methods: {
+        logout() {
+            localStorage.clear();
+            window.location.href = '/';
+        }
+    }
 }
 </script>

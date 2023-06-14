@@ -18,14 +18,14 @@ class LoginAction {
         ]);
     
         if ($validator->fails()) {
-            return response()->json(['error' => $validator->errors()->first()], 400);
+            return response()->json(['error' => $validator->errors()->first()]);
         }
     
         $credentials = $request->only('email', 'password');
     
         try {
             if (! $token = JWTAuth::attempt($credentials)) {
-                return response()->json(['error' => 'Invalid credentials'], 401);
+                return response()->json(['error' => 'Invalid credentials']);
             }
         } catch (JWTException $e) {
             return response()->json(['error' => 'Could not create token'], 500);
@@ -35,10 +35,12 @@ class LoginAction {
         $role = UserRole::where('user_id', '=', $user->id)->first();
     
         Session::put('role_id', $role->role_id);
+        Session::put('token', $token);
     
         return response()->json([
             'success' => 'You have successfully logged in!',
             'user' => $user,
+            'role_id' => $role->role_id,
             'token' => $token
         ]);
     }
