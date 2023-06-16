@@ -36,13 +36,13 @@
                                 </ul>
                                 <ul v-else-if="role_id && role_id === '2'" class="main-menu list-unstyled justify-content-center">
                                     <li class="menu-list-item nav-item">
-                                        <a :href="$router.resolve({name: 'blog'}).href" class="nav-link">Users</a>
+                                        <a :href="$router.resolve({name: 'users'}).href" class="nav-link">Users</a>
                                     </li>
                                     <li class="menu-list-item nav-item">
-                                        <a :href="$router.resolve({name: 'contact'}).href" class="nav-link">Categories</a>
+                                        <a :href="$router.resolve({name: 'categories'}).href" class="nav-link">Categories</a>
                                     </li>
                                     <li class="menu-list-item nav-item">
-                                        <a :href="$router.resolve({name: 'login'}).href" class="nav-link">Logout</a>
+                                        <a @click="logout" class="nav-link">Logout</a>
                                     </li>
                                 </ul>
                                 <ul v-else class="main-menu list-unstyled justify-content-center"> 
@@ -103,9 +103,6 @@
 <script>
 export default {
     name: 'Navbar',
-    mounted() {
-        console.log(this.role_id, typeof this.role_id)
-    },
     data() {
         return {
             role_id: localStorage.getItem('role_id') ? localStorage.getItem('role_id') : null
