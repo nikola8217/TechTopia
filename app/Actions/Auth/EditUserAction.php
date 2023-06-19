@@ -13,23 +13,24 @@ class EditUserAction {
         $validator = Validator::make($request->all(), [
             'name' => 'required',
             'email' => 'required|email',
-            'role_id' => 'require|numeric'
+            'points' => 'required|numeric',
+            'role_id' => 'required|numeric'
         ]);
     
-        if ($validator->fails()) return response()->json(['error' => $validator->errors()->first()], 400);
+        if ($validator->fails()) return response()->json(['error' => $validator->errors()->first()]);
     
-        if (User::where('email', '=', $request->email)->first()) return response()->json(['error' => 'Email is already taken!'], 400);
+        if (User::where('email', '=', $request->email)->where('id', '!=', $id)->first()) return response()->json(['error' => 'Email is already taken!']);
 
-        if (!Role::where('id', $request->role_id)->first()) return response()->json(['error' => 'Role with this id does not exist!'], 400);
+        if (!Role::where('id', $request->role_id)->first()) return response()->json(['error' => 'Role with this id does not exist!']);
         
-        $user = User::editUser($id, $request->name, $request->email);
-        $user_role = UserRole::where('user_id', $id)->where('role_id', $request->role_id)->first();
-        $user_role_upd = UserRole::editUserRole($user_role->id, $id, $request->role_id);
+        $user = User::editUser($id, $request->name, $request->email, $request->points);
+       
+        $user_role = UserRole::editUserRole($id, $request->role_id);
     
         return response()->json([
             'success' => 'You have successfully updated user!',
             'user' => $user,
-            'user_role' => $user_role_upd,
+            'user_role' => $user_role,
         ]);
 
     }

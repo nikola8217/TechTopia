@@ -22,3 +22,7 @@ mix.js('resources/js/app.js', 'public/js')
     .postCss('resources/css/app.css', 'public/css', [
         //
     ]);
+    // .postCss('public/asset/css/style.css', 'public/asset/css')
+    // .postCss('public/asset/css/vendor.css', 'public/asset/css');
+
+

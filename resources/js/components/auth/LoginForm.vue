@@ -1,5 +1,5 @@
 <template>
-    <div class="login-page mt-100">
+    <div class="login-page mt-100" style="margin-bottom: 220px">
         <div class="container">
             <form action="#" class="login-form common-form mx-auto" @submit="login">
                 <div class="section-header mb-3">
@@ -64,7 +64,8 @@ export default {
                             localStorage.setItem('token', response.data.token);
                             localStorage.setItem('user_id', response.data.user.id);
                             localStorage.setItem('role_id', response.data.role_id);
-                            window.location.href = '/';
+                            if (localStorage.getItem('role_id') === '2') window.location.href = '/users';
+                            else window.location.href = '/';
                         }
                     });
                 }                   

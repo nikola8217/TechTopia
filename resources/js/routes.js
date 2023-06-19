@@ -7,6 +7,7 @@ import Login from './pages/Login.vue';
 import Register from './pages/Register.vue';
 import Users from './pages/admin/Users.vue';
 import Categories from './pages/admin/Categories.vue';
+import UsersForm from './pages/admin/forms/Users.vue';
 
 const routes = [
   {
@@ -48,6 +49,12 @@ const routes = [
     path: '/users',
     component: Users,
     name: 'users'
+  },
+  {
+    path: '/usersForm/:id',
+    component: UsersForm,
+    name: 'usersForm/',
+    props: true
   },
   {
     path: '/categories',

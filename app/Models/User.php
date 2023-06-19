@@ -86,10 +86,11 @@ class User extends Authenticatable implements JWTSubject
         ->first();
     }
 
-    public static function editUser($id, $name, $email) {
+    public static function editUser($id, $name, $email, $points) {
         return User::where('id', $id)->update([
             'name' => $name,
-            'email' => $email
+            'email' => $email,
+            'points' => $points
         ]);
     }
 }

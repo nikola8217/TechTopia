@@ -19,11 +19,11 @@ Route::get('blogs/{id}', [BlogController::class, 'getBlog']);
 
 Route::group(['middleware' => 'jwt.auth'], function () {
     // users
-    Route::get('getCurrentUser', [AuthController::class, 'getCurrentUser']);
     Route::get('users', [AuthController::class, 'getUsers']);
     Route::get('users/{id}', [AuthController::class, 'getUser']);
     Route::put('users/{id}', [AuthController::class, 'editUser']);
     Route::delete('users/{id}', [AuthController::class, 'deleteUser']);
+    Route::get('roles', [AuthController::class, 'getRoles']);
     // categories 
     Route::post('categories', [CategoryController::class, 'createCategory']);
     Route::put('categories/{id}', [CategoryController::class, 'editCategory']);

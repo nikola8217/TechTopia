@@ -9,6 +9,7 @@ use App\Actions\Auth\LoginAction;
 use App\Actions\Auth\EditUserAction;
 use App\Models\User;
 use App\Models\UserRole;
+use App\Models\Role;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
@@ -36,8 +37,6 @@ class AuthController extends Controller
     public function getUsers() {
         $users = User::getUsers();
 
-        // dd($users);
-
         return response()->json([
             'users' => $users 
         ]);
@@ -56,23 +55,23 @@ class AuthController extends Controller
     }
 
     public function deleteUser($id) {
+        if(!User::where('id', $id)->first()) return response()->json(['error' => 'User does not exist!']);
+
         UserRole::where('user_id', $id)->delete();
         
         User::where('id', $id)->delete();
+
+        return response()->json([
+            'success' => 'You have successfully deleted user!'
+        ]);
     }
 
-    public function getCurrentUser() {
-        $user = auth()->user();
-        
-        if ($user) {
-            $role = UserRole::where('user_id', $user->id)->first();
-            return response()->json([
-                'user_id' => $user->id ?? null,
-                'role_id' => $role->role_id ?? null
-            ]);
-        }
-        
-        return response()->json(['error' => 'User not found']);
+    public function getRoles() {
+        $roles = Role::all();
+
+        return response()->json([
+            'roles' => $roles 
+        ]);
     }
 
 }

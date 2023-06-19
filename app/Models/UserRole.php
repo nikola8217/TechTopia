@@ -23,9 +23,8 @@ class UserRole extends Model
         ]);
     }
 
-    public static function editUserRole($id, $user_id, $role_id) {
-        return UserRole::where('id', $id)->update([
-            'user_id' => $user_id,
+    public static function editUserRole($user_id, $role_id) {
+        return UserRole::where('id', $user_id)->update([
             'role_id' => $role_id
         ]);
     }
