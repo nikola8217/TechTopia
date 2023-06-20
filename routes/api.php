@@ -10,8 +10,8 @@ use App\Http\Controllers\api\CommentController;
 
 Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
-Route::get('getCurrentUser', [AuthController::class, 'getCurrentUser']);
 Route::get('categories', [CategoryController::class, 'getCategories']);
+Route::get('categories/{id}', [CategoryController::class, 'getCategory']);
 Route::get('products', [ProductController::class, 'getProducts']);
 Route::get('products/{id}', [ProductController::class, 'getProduct']);
 Route::get('blogs', [BlogController::class, 'getBlogs']);

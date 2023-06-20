@@ -12,9 +12,9 @@ class CreateCategoryAction {
             'name' => 'required',
         ]);
     
-        if ($validator->fails()) return response()->json(['error' => $validator->errors()->first()], 400);
+        if ($validator->fails()) return response()->json(['error' => $validator->errors()->first()]);
         
-        if (Category::where('name', $request->name)->first()) return response()->json(['error' => 'Category already exists!'], 400);
+        if (Category::where('name', $request->name)->first()) return response()->json(['error' => 'Category already exists!']);
 
         $category = Category::createCategory($request->name);
 

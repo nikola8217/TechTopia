@@ -17,6 +17,10 @@ class Category extends Model
         return Category::all();
     }
 
+    public static function getCategory($id) {
+        return Category::where('id', $id)->first();
+    }
+
     public static function createCategory($name){
         return Category::create([
             'name' => $name

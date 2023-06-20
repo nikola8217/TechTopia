@@ -27,6 +27,14 @@ class CategoryController extends Controller
         ]);
     }
 
+    public function getCategory($id) {
+        $category = Category::getCategory($id);
+
+        return response()->json([
+            'category' => $category
+        ]);
+    }
+
     public function createCategory(Request $request) {
         return $this->createCategoryAction->execute($request);
     }
@@ -36,6 +44,8 @@ class CategoryController extends Controller
     }
 
     public function deleteCategory($id) {
+        if(!Category::where('id', $id)->first()) return response()->json(['error' => 'Category does not exist!']);
+
         Category::where('id', $id)->delete();
 
         return response()->json([
