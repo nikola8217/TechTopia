@@ -27,6 +27,14 @@ class ProductController extends Controller
         
     }
 
+    public function getProductsByCategory($id) {
+        $products = Product::getProductByCategory($id);
+
+        return response()->json([
+            "products" => $products
+        ]);
+    }
+
     public function getProduct($id) {
         
         $product = Product::getProduct($id);

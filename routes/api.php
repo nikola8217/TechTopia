@@ -36,6 +36,7 @@ Route::group(['middleware' => 'jwt.auth'], function () {
      Route::put('brands/{id}', [BrandController::class, 'editBrand']);
      Route::delete('brands/{id}', [BrandController::class, 'deleteBrand']);
     // products 
+    Route::get('productsByCategory/{id}', [ProductController::class, 'getProductsByCategory']);
     Route::post('products', [ProductController::class, 'createProduct']);
     Route::put('products/{id}', [ProductController::class, 'editProduct']);
     Route::delete('products/{id}', [ProductController::class, 'deleteProduct']);

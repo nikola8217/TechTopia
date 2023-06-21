@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Product extends Model
 {
@@ -17,8 +18,21 @@ class Product extends Model
         'category_id'
     ];
 
-    public static function getProductsByCat() {
+    public static function getProducts() {
         return Product::all();
+    }
+
+    public static function getProductByCategory($id) {
+        return DB::table('products')
+        ->join('brands', 'products.brand_id', '=', 'brands.id')
+        ->select('products.id AS product_id', 
+                'products.name AS name', 
+                'products.price AS price', 
+                'products.discount AS discount', 
+                'products.price_with_discount AS price_with_discount', 
+                'brands.name AS brand_name')
+        ->where('products.category_id', $id)
+        ->get();
     }
 
     public static function createProduct($name, $desc, $price, $img, $category_id){

@@ -3,33 +3,49 @@
         <div class="container">
             <div class="cart-page-wrapper">
                 <div class="row">
-                    <div class="col-lg-8 col-md-12 col-12">
+                    <div class="col-lg-12 col-md-12 col-12">
                         <div class="mb-5">
-                            <button class="btn btn-success" @click="createCategory">Create Category</button>
+                            <button class="btn btn-success" @click="createProduct">Create Product</button>
                         </div>
                         <table class="cart-table w-100">
                             <thead>
                                 <tr>
                                     <th>ID</th>
                                     <th>Name</th>
+                                    <th>Brand</th>
+                                    <th>Price (RSD)</th>
+                                    <th>Discount (%)</th>
+                                    <th>Price with discount (RSD)</th>
                                     <th style="text-align: right">Actions</th>
                                 </tr>
                             </thead>
                 
                             <tbody>
-                                <tr class="cart-item" v-for="(category, index) in this.categories" :key="index">
+                                <tr class="cart-item" v-for="(product, index) in this.products" :key="index">
                                     <td>
-                                        {{ category.id }}
+                                        {{ product.product_id }}
                                     </td>
                                     <td>
-                                        <p @click="navToProducts(category.id)"> {{ category.name }} </p>                                 
+                                        {{ product.name }}                                    
+                                    </td>
+                                    <td>
+                                        {{ product.brand_name }}                                    
+                                    </td>
+                                    <td>
+                                        {{ product.price }}                                    
+                                    </td>
+                                    <td>
+                                        {{ product.discount }}                                    
+                                    </td>
+                                    <td>
+                                        {{ product.price_with_discount }}                                    
                                     </td>
                                     <td>
                                         <div class="btn-group" style="float: right;">
-                                            <button class="btn btn-primary" style="margin-right: 5px;" @click="editCategory(category.id)">
+                                            <button class="btn btn-primary" style="margin-right: 5px;" @click="editProduct(product.id)">
                                                 Edit
                                             </button>
-                                            <button class="btn btn-danger" @click="deleteCategory(category.id)">
+                                            <button class="btn btn-danger" @click="deleteProduct(product.id)">
                                                 Delete
                                             </button>
                                         </div>
@@ -49,35 +65,40 @@ import axios from 'axios';
 import Swal from 'sweetalert2';
 
 export default {
-    name: "CategoriesTable",
+    name: "ProductsTable",
     mounted() {
-        this.getCategories();
+        this.getProducts(this.$route.params.id);
+        // console.log(this.$route.params, 1);
     },
     data() {
         return {
-            categories: []
+            products: []
         }
     },
     methods: {
-        async getCategories() {
-            await axios.get('/api/categories')
+        async getProducts() {
+            await axios.get(`/api/productsByCategory/${this.$route.params.id}`, {
+                headers: {
+                    Authorization: `Bearer ${localStorage.getItem('token')}`
+                }
+            })
                 .then(response => {
-                    this.categories = response.data.categories;
+                    this.products = response.data.products;
                 })
                 .catch(error => {
                     console.log(error);
                 });
         },
 
-        createCategory() {
-            window.location.href = '/categoriesForm';
+        createProduct() {
+            window.location.href = '/productsForm';
         },
 
-        editCategory(id) {
-            window.location.href = `/categoriesForm/${id}`; 
+        editProduct(id) {
+            window.location.href = `/productsForm/${id}`; 
         },
 
-        async deleteCategory(id) {
+        async deleteProduct(id) {
             Swal.fire({
                 title: 'Are you sure?',
                 text: "You won't be able to revert this!",
@@ -87,7 +108,7 @@ export default {
                 cancelButtonText: 'Cancel'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    axios.delete(`/api/categories/${id}`, {
+                    axios.delete(`/api/products/${id}`, {
                         headers: {
                         Authorization: `Bearer ${localStorage.getItem('token')}`
                         }
@@ -98,18 +119,14 @@ export default {
                             response.data.success,
                             'success'
                         );
-                        this.getCategories();
+                        this.getProducts(this.$route.params.id);
                     })
                     .catch(error => {
                         console.error(error);
                     });
                 }
             });
-        },
-
-        navToProducts(id) {
-            window.location.href = `/productsAdmin/${id}`; 
-        },
+        }
     }
 }
 </script>
