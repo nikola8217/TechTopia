@@ -18,7 +18,11 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->text('description');
             $table->float('price');
-            $table->string('img');
+            $table->float('discount');
+            $table->float('price_with_discount');
+            $table->string('first_img');
+            $table->string('second_img');
+            $table->unsignedBigInteger('brand_id');
             $table->unsignedBigInteger('category_id');
             $table->timestamps();
         });

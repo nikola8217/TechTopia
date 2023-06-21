@@ -7,11 +7,14 @@ use App\Http\Controllers\api\CategoryController;
 use App\Http\Controllers\api\ProductController;
 use App\Http\Controllers\api\BlogController;
 use App\Http\Controllers\api\CommentController;
+use App\Http\Controllers\api\BrandController;
 
 Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
 Route::get('categories', [CategoryController::class, 'getCategories']);
 Route::get('categories/{id}', [CategoryController::class, 'getCategory']);
+Route::get('brands', [BrandController::class, 'getBrands']);
+Route::get('brands/{id}', [BrandController::class, 'getBrand']);
 Route::get('products', [ProductController::class, 'getProducts']);
 Route::get('products/{id}', [ProductController::class, 'getProduct']);
 Route::get('blogs', [BlogController::class, 'getBlogs']);
@@ -28,6 +31,10 @@ Route::group(['middleware' => 'jwt.auth'], function () {
     Route::post('categories', [CategoryController::class, 'createCategory']);
     Route::put('categories/{id}', [CategoryController::class, 'editCategory']);
     Route::delete('categories/{id}', [CategoryController::class, 'deleteCategory']);
+     // brands
+     Route::post('brands', [BrandController::class, 'createBrand']);
+     Route::put('brands/{id}', [BrandController::class, 'editBrand']);
+     Route::delete('brands/{id}', [BrandController::class, 'deleteBrand']);
     // products 
     Route::post('products', [ProductController::class, 'createProduct']);
     Route::put('products/{id}', [ProductController::class, 'editProduct']);
