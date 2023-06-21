@@ -42,6 +42,9 @@
                                         <a :href="$router.resolve({name: 'categories'}).href" class="nav-link">Categories</a>
                                     </li>
                                     <li class="menu-list-item nav-item">
+                                        <a :href="$router.resolve({name: 'brands'}).href" class="nav-link">Brands</a>
+                                    </li>
+                                    <li class="menu-list-item nav-item">
                                         <a @click="logout" class="nav-link">Logout</a>
                                     </li>
                                 </ul>

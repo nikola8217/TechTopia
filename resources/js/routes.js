@@ -9,6 +9,8 @@ import Users from './pages/admin/Users.vue';
 import Categories from './pages/admin/Categories.vue';
 import UsersForm from './pages/admin/forms/Users.vue';
 import CategoriesForm from './pages/admin/forms/Categories.vue';
+import Brands from './pages/admin/Brands.vue';
+import BrandsForm from './pages/admin/forms/Brands.vue';
 
 const routes = [
   {
@@ -66,6 +68,16 @@ const routes = [
     path: '/categoriesForm/:id?',
     component: CategoriesForm,
     name: 'categoriesForm',
+  },
+  {
+    path: '/brands',
+    component: Brands,
+    name: 'brands'
+  },
+  {
+    path: '/brandsForm/:id?',
+    component: BrandsForm,
+    name: 'brandsForm',
   },
 ];
 
