@@ -42,10 +42,10 @@
                                     </td>
                                     <td>
                                         <div class="btn-group" style="float: right;">
-                                            <button class="btn btn-primary" style="margin-right: 5px;" @click="editProduct(product.id)">
+                                            <button class="btn btn-primary" style="margin-right: 5px;" @click="editProduct(product.product_id)">
                                                 Edit
                                             </button>
-                                            <button class="btn btn-danger" @click="deleteProduct(product.id)">
+                                            <button class="btn btn-danger" @click="deleteProduct(product.product_id)">
                                                 Delete
                                             </button>
                                         </div>
@@ -68,7 +68,6 @@ export default {
     name: "ProductsTable",
     mounted() {
         this.getProducts(this.$route.params.id);
-        // console.log(this.$route.params, 1);
     },
     data() {
         return {
@@ -91,11 +90,11 @@ export default {
         },
 
         createProduct() {
-            window.location.href = '/productsForm';
+            window.location.href = `/productsForm/${this.$route.params.id}`;
         },
 
         editProduct(id) {
-            window.location.href = `/productsForm/${id}`; 
+            window.location.href = `/productsForm/${this.$route.params.id}/${id}`; 
         },
 
         async deleteProduct(id) {

@@ -12,10 +12,13 @@ class Product extends Model
 
     protected $fillable = [
         'name',
-        'description',
         'price',
-        'img',
-        'category_id'
+        'discount',
+        'price_with_discount',
+        'first_img',
+        'second_img',
+        'category_id',
+        'brand_id'
     ];
 
     public static function getProducts() {
@@ -35,27 +38,34 @@ class Product extends Model
         ->get();
     }
 
-    public static function createProduct($name, $desc, $price, $img, $category_id){
+    public static function createProduct($name, $price, $discount, $price_with_discount, $first_img, $second_img, $category_id, $brand_id) {
         return Product::create([
             'name' => $name,
-            'description' => $desc,
             'price' => $price,
-            'img' => $img,
-            'category_id' => $category_id
+            'discount' => $discount,
+            'price_with_discount' => $price_with_discount,
+            'first_img' => '../images/' . $first_img,
+            'second_img' => '../images/' . $second_img,
+            'category_id' => $category_id,
+            'brand_id' => $brand_id
         
         ]);
     }
 
-    public static function editProduct($id, $name, $desc, $price, $img) {
+    public static function editProduct($id, $name, $price, $discount, $price_with_discount, $first_img, $second_img, $category_id, $brand_id) {
         return Product::where('id', $id)->update([
             'name' => $name,
-            'description' => $desc,
             'price' => $price,
-            'img' => $img  
+            'discount' => $discount,
+            'price_with_discount' => $price_with_discount,
+            'first_img' => '../images/' . $first_img,
+            'second_img' => '../images/' . $second_img,
+            'category_id' => $category_id,
+            'brand_id' => $brand_id
         ]);
     }
 
     public static function getProduct($id) {
-        return Product::where('id', '=', $id)->get();
+        return Product::where('id', '=', $id)->first();
     }
 }

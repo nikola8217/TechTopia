@@ -50,7 +50,7 @@ class ProductController extends Controller
     }
 
     public function editProduct(Request $request, $id) {
-        return $this->createProductAction->execute($request, $id);
+        return $this->editProductAction->execute($request, $id);
     }
 
     public function deleteProduct($id) {
