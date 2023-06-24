@@ -65,6 +65,7 @@ export default {
                             localStorage.setItem('user_id', response.data.user.id);
                             localStorage.setItem('role_id', response.data.role_id);
                             if (localStorage.getItem('role_id') === '2') window.location.href = '/users';
+                            else if (localStorage.getItem('role_id') === '3') window.location.href = '/blogsManager';
                             else window.location.href = '/';
                         }
                     });

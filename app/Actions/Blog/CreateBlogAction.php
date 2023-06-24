@@ -14,9 +14,9 @@ class CreateBlogAction {
             'body' => 'required'
         ]);
     
-        if ($validator->fails()) return response()->json(['error' => $validator->errors()->first()], 400);
+        if ($validator->fails()) return response()->json(['error' => $validator->errors()->first()]);
         
-        if (Blog::where('title', $request->title)->first()) return response()->json(['error' => 'Blog with this title already exists!'], 400);
+        if (Blog::where('title', $request->title)->first()) return response()->json(['error' => 'Blog with this title already exists!']);
 
         $blog = Blog::createBlog($request->title, $request->img, $request->body);
 

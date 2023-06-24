@@ -19,7 +19,7 @@ class Blog extends Model
         return Blog::create([
             'title' => $title,
             'body' => $text,
-            'img' => $img,
+            'img' => '../images/' . $img,
         ]);
     }
 
@@ -28,14 +28,14 @@ class Blog extends Model
     }
 
     public static function getBlog($id) {
-        return Blog::where('id', $id)->get();
+        return Blog::where('id', $id)->first();
     }
 
     public static function editBlog($id, $title, $text, $img) {
         return Blog::where('id', $id)->update([
             'title' => $title,
             'body' => $text,
-            'img' => $img  
+            'img' => '../images/' . $img  
         ]);
     }
 }

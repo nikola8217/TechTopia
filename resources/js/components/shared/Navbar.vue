@@ -48,6 +48,14 @@
                                         <a @click="logout" class="nav-link">Logout</a>
                                     </li>
                                 </ul>
+                                <ul v-else-if="role_id && role_id === '3'" class="main-menu list-unstyled justify-content-center">
+                                    <li class="menu-list-item nav-item">
+                                        <a :href="$router.resolve({name: 'blogsManager'}).href" class="nav-link">Blogs</a>
+                                    </li>
+                                    <li class="menu-list-item nav-item">
+                                        <a @click="logout" class="nav-link">Logout</a>
+                                    </li>
+                                </ul>
                                 <ul v-else class="main-menu list-unstyled justify-content-center"> 
                                     <li class="menu-list-item nav-item">
                                         <a :href="$router.resolve({name: 'home'}).href" class="nav-link">Home</a>

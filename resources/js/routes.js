@@ -13,6 +13,8 @@ import Brands from './pages/admin/Brands.vue';
 import BrandsForm from './pages/admin/forms/Brands.vue';
 import ProductsAdmin from './pages/admin/Products.vue';
 import ProductsForm from './pages/admin/forms/Products.vue';
+import BlogsManager from './pages/manager/Blogs.vue';
+import BlogsForm from './pages/manager/forms/Blogs.vue';
 
 const routes = [
   {
@@ -90,6 +92,16 @@ const routes = [
     path: '/productsForm/:id/:product_id?',
     component: ProductsForm,
     name: 'productsForm',
+  },
+  {
+    path: '/blogsManager',
+    component: BlogsManager,
+    name: 'blogsManager'
+  },
+  {
+    path: '/blogsForm/:id?',
+    component: BlogsForm,
+    name: 'blogsForm'
   },
 ];
 
