@@ -2,6 +2,7 @@ import Home from './pages/Home.vue';
 import About from './pages/About.vue';
 import Products from './pages/Products.vue';
 import Blog from './pages/Blog.vue';
+import BlogDetails from './pages/BlogDetails.vue';
 import Contact from './pages/Contact.vue';
 import Login from './pages/Login.vue';
 import Register from './pages/Register.vue';
@@ -36,6 +37,11 @@ const routes = [
     path: '/blog',
     component: Blog,
     name: 'blog'
+  },
+  {
+    path: '/blogDetails/:id',
+    component: BlogDetails,
+    name: 'blogDetails'
   },
   {
     path: '/contact',
