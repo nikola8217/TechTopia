@@ -1,6 +1,7 @@
 import Home from './pages/Home.vue';
 import About from './pages/About.vue';
 import Products from './pages/Products.vue';
+import ProductDetails from './pages/ProductDetails.vue';
 import Blog from './pages/Blog.vue';
 import BlogDetails from './pages/BlogDetails.vue';
 import Contact from './pages/Contact.vue';
@@ -32,6 +33,11 @@ const routes = [
     path: '/products',
     component: Products,
     name: 'products'
+  },
+  {
+    path: '/productDetails/:id',
+    component: ProductDetails,
+    name: 'productDetails'
   },
   {
     path: '/blog',

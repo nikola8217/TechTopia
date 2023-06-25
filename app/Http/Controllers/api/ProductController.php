@@ -21,9 +21,11 @@ class ProductController extends Controller
 
     public function getProducts() {
         
-        $products = Product::getProductsByCat();
+        $products = Product::getProducts();
     
-        return response()->json($products);
+        return response()->json([
+            "products" => $products
+        ]);
         
     }
 

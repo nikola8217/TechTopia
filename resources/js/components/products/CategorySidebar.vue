@@ -49,63 +49,11 @@
                     </div>
                     <div id="filter-collection" class="accordion-collapse collapse show">
                         <ul class="filter-lists list-unstyled mb-0">
-                            <li class="filter-item">
+                            <li class="filter-item" v-for="(category, index) in this.categories" :key="index">
                                 <label class="filter-label">
-                                    <input type="checkbox" />
+                                    <input type="checkbox" :value="category.id" />
                                     <span class="filter-checkbox rounded me-2"></span>
-                                    <span class="filter-text">Womens Bag</span>
-                                </label>
-                            </li>
-                            <li class="filter-item">
-                                <label class="filter-label">
-                                    <input type="checkbox" />
-                                    <span class="filter-checkbox rounded me-2"></span>
-                                    Bottles
-                                </label>
-                            </li>
-                            <li class="filter-item">
-                                <label class="filter-label">
-                                    <input type="checkbox" />
-                                    <span class="filter-checkbox rounded me-2"></span>
-                                    Men's Shoe
-                                </label>
-                            </li>
-                            <li class="filter-item">
-                                <label class="filter-label">
-                                    <input type="checkbox" />
-                                    <span class="filter-checkbox rounded me-2"></span>
-                                    Toddler Dress
-                                </label>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="filter-widget">
-                    <div class="filter-header faq-heading heading_18 d-flex align-items-center justify-content-between border-bottom"
-                        data-bs-toggle="collapse" data-bs-target="#filter-availability">
-                        Availability
-                        <span class="faq-heading-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" class="icon icon-down">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </span>
-                    </div>
-                    <div id="filter-availability" class="accordion-collapse collapse show">
-                        <ul class="filter-lists list-unstyled mb-0">
-                            <li class="filter-item">
-                                <label class="filter-label">
-                                    <input type="checkbox" />
-                                    <span class="filter-checkbox rounded me-2"></span>
-                                    <span class="filter-text">In Stock</span>
-                                </label>
-                            </li>
-                            <li class="filter-item">
-                                <label class="filter-label">
-                                    <input type="checkbox" />
-                                    <span class="filter-checkbox rounded me-2"></span>
-                                    Out of Stock
+                                    <span class="filter-text">{{ category.name }}</span>
                                 </label>
                             </li>
                         </ul>
@@ -137,10 +85,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="filter-widget filter-color">
+                <div class="filter-widget">
                     <div class="filter-header faq-heading heading_18 d-flex align-items-center justify-content-between border-bottom"
-                        data-bs-toggle="collapse" data-bs-target="#filter-color">
-                        Colors
+                        data-bs-toggle="collapse" data-bs-target="#filter-brands">
+                        Brands
                         <span class="faq-heading-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                 viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2"
@@ -149,354 +97,17 @@
                             </svg>
                         </span>
                     </div>
-                    <div id="filter-color" class="accordion-collapse collapse show">
+                    <div id="filter-brands" class="accordion-collapse collapse show">
                         <ul class="filter-lists list-unstyled mb-0">
-                            <li class="filter-item">
-                                <label class="filter-label blue">
-                                    <input type="checkbox" />
+                            <li class="filter-item" v-for="(brand, index) in this.brands" :key="index">
+                                <label class="filter-label">
+                                    <input type="checkbox" :value="brand.id" />
                                     <span class="filter-checkbox rounded me-2"></span>
-                                </label>
-                            </li>
-                            <li class="filter-item">
-                                <label class="filter-label red">
-                                    <input type="checkbox" />
-                                    <span class="filter-checkbox rounded me-2"></span>
-                                </label>
-                            </li>
-                            <li class="filter-item">
-                                <label class="filter-label green">
-                                    <input type="checkbox" />
-                                    <span class="filter-checkbox rounded me-2"></span>
-                                </label>
-                            </li>
-                            <li class="filter-item">
-                                <label class="filter-label purple">
-                                    <input type="checkbox" />
-                                    <span class="filter-checkbox rounded me-2"></span>
-                                </label>
-                            </li>
-                            <li class="filter-item">
-                                <label class="filter-label gold">
-                                    <input type="checkbox" />
-                                    <span class="filter-checkbox rounded me-2"></span>
-                                </label>
-                            </li>
-                            <li class="filter-item">
-                                <label class="filter-label pink">
-                                    <input type="checkbox" />
-                                    <span class="filter-checkbox rounded me-2"></span>
-                                </label>
-                            </li>
-                            <li class="filter-item">
-                                <label class="filter-label orange">
-                                    <input type="checkbox" />
-                                    <span class="filter-checkbox rounded me-2"></span>
-                                </label>
-                            </li>
-                            <li class="filter-item">
-                                <label class="filter-label aqua">
-                                    <input type="checkbox" />
-                                    <span class="filter-checkbox rounded me-2"></span>
-                                </label>
-                            </li>
-                            <li class="filter-item">
-                                <label class="filter-label brown">
-                                    <input type="checkbox" />
-                                    <span class="filter-checkbox rounded me-2"></span>
-                                </label>
-                            </li>
-                            <li class="filter-item">
-                                <label class="filter-label bisque">
-                                    <input type="checkbox" />
-                                    <span class="filter-checkbox rounded me-2"></span>
-                                </label>
-                            </li>
-                            <li class="filter-item">
-                                <label class="filter-label grey">
-                                    <input type="checkbox" />
-                                    <span class="filter-checkbox rounded me-2"></span>
+                                    <span class="filter-text">{{ brand.name }}</span>
                                 </label>
                             </li>
                         </ul>
                     </div>
-                </div>
-                <div class="filter-widget">
-                    <div class="filter-header faq-heading heading_18 d-flex align-items-center justify-content-between border-bottom"
-                        data-bs-toggle="collapse" data-bs-target="#filter-size">
-                        Size
-                        <span class="faq-heading-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" class="icon icon-down">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </span>
-                    </div>
-                    <div id="filter-size" class="accordion-collapse collapse show">
-                        <ul class="filter-lists list-unstyled mb-0">
-                            <li class="filter-item">
-                                <label class="filter-label">
-                                    <input type="checkbox" />
-                                    <span class="filter-checkbox rounded me-2"></span>
-                                    <span class="filter-text">XS</span>
-                                </label>
-                            </li>
-                            <li class="filter-item">
-                                <label class="filter-label">
-                                    <input type="checkbox" />
-                                    <span class="filter-checkbox rounded me-2"></span>
-                                    S
-                                </label>
-                            </li>
-                            <li class="filter-item">
-                                <label class="filter-label">
-                                    <input type="checkbox" />
-                                    <span class="filter-checkbox rounded me-2"></span>
-                                    M
-                                </label>
-                            </li>
-                            <li class="filter-item">
-                                <label class="filter-label">
-                                    <input type="checkbox" />
-                                    <span class="filter-checkbox rounded me-2"></span>
-                                    L
-                                </label>
-                            </li>
-                            <li class="filter-item">
-                                <label class="filter-label">
-                                    <input type="checkbox" />
-                                    <span class="filter-checkbox rounded me-2"></span>
-                                    XL
-                                </label>
-                            </li>
-                            <li class="filter-item">
-                                <label class="filter-label">
-                                    <input type="checkbox" />
-                                    <span class="filter-checkbox rounded me-2"></span>
-                                    XXL
-                                </label>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="filter-widget">
-                    <div class="filter-header faq-heading heading_18 d-flex align-items-center justify-content-between border-bottom"
-                        data-bs-toggle="collapse" data-bs-target="#filter-vendor">
-                        Vendor
-                        <span class="faq-heading-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" class="icon icon-down">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </span>
-                    </div>
-                    <div id="filter-vendor" class="accordion-collapse collapse show">
-                        <ul class="filter-lists list-unstyled mb-0">
-                            <li class="filter-item">
-                                <label class="filter-label">
-                                    <input type="checkbox" />
-                                    <span class="filter-checkbox rounded me-2"></span>
-                                    <span class="filter-text">Bynd</span>
-                                </label>
-                            </li>
-                            <li class="filter-item">
-                                <label class="filter-label">
-                                    <input type="checkbox" />
-                                    <span class="filter-checkbox rounded me-2"></span>
-                                    Huemor
-                                </label>
-                            </li>
-                            <li class="filter-item">
-                                <label class="filter-label">
-                                    <input type="checkbox" />
-                                    <span class="filter-checkbox rounded me-2"></span>
-                                    Jordan Crown
-                                </label>
-                            </li>
-                            <li class="filter-item">
-                                <label class="filter-label">
-                                    <input type="checkbox" />
-                                    <span class="filter-checkbox rounded me-2"></span>
-                                    Hubspot
-                                </label>
-                            </li>
-                            <li class="filter-item">
-                                <label class="filter-label">
-                                    <input type="checkbox" />
-                                    <span class="filter-checkbox rounded me-2"></span>
-                                    Ramotion
-                                </label>
-                            </li>
-                            <li class="filter-item">
-                                <label class="filter-label">
-                                    <input type="checkbox" />
-                                    <span class="filter-checkbox rounded me-2"></span>
-                                    Infosolutions
-                                </label>
-                            </li>
-                            <li class="filter-item">
-                                <label class="filter-label">
-                                    <input type="checkbox" />
-                                    <span class="filter-checkbox rounded me-2"></span>
-                                    Ideo
-                                </label>
-                            </li>
-                            <li class="filter-item">
-                                <label class="filter-label">
-                                    <input type="checkbox" />
-                                    <span class="filter-checkbox rounded me-2"></span>
-                                    Codal
-                                </label>
-                            </li>
-                            <li class="filter-item">
-                                <label class="filter-label">
-                                    <input type="checkbox" />
-                                    <span class="filter-checkbox rounded me-2"></span>
-                                    Salesforce
-                                </label>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="filter-widget">
-                    <div class="filter-header faq-heading heading_18 d-flex align-items-center justify-content-between border-bottom"
-                        data-bs-toggle="collapse" data-bs-target="#filter-type">
-                        Product Type
-                        <span class="faq-heading-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" class="icon icon-down">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </span>
-                    </div>
-                    <div id="filter-type" class="accordion-collapse collapse show">
-                        <ul class="filter-lists list-unstyled mb-0">
-                            <li class="filter-item">
-                                <label class="filter-label">
-                                    <input type="checkbox" />
-                                    <span class="filter-checkbox rounded me-2"></span>
-                                    <span class="filter-text">Bodysuit</span>
-                                </label>
-                            </li>
-                            <li class="filter-item">
-                                <label class="filter-label">
-                                    <input type="checkbox" />
-                                    <span class="filter-checkbox rounded me-2"></span>
-                                    Hoodie
-                                </label>
-                            </li>
-                            <li class="filter-item">
-                                <label class="filter-label">
-                                    <input type="checkbox" />
-                                    <span class="filter-checkbox rounded me-2"></span>
-                                    Jacket
-                                </label>
-                            </li>
-                            <li class="filter-item">
-                                <label class="filter-label">
-                                    <input type="checkbox" />
-                                    <span class="filter-checkbox rounded me-2"></span>
-                                    Legging
-                                </label>
-                            </li>
-                            <li class="filter-item">
-                                <label class="filter-label">
-                                    <input type="checkbox" />
-                                    <span class="filter-checkbox rounded me-2"></span>
-                                    Short
-                                </label>
-                            </li>
-                            <li class="filter-item">
-                                <label class="filter-label">
-                                    <input type="checkbox" />
-                                    <span class="filter-checkbox rounded me-2"></span>
-                                    Top
-                                </label>
-                            </li>
-                            <li class="filter-item">
-                                <label class="filter-label">
-                                    <input type="checkbox" />
-                                    <span class="filter-checkbox rounded me-2"></span>
-                                    Underwear
-                                </label>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="filter-widget">
-                    <div
-                        class="filter-header faq-heading heading_18 d-flex align-items-center border-bottom">
-                        Related products
-                    </div>
-                    <div class="filter-related">
-                        <div class="related-item d-flex">
-                            <div class="related-img-wrapper">
-                                <img class="related-img" src="asset/img/products/furniture/21.jpg"
-                                    alt="img">
-                            </div>
-                            <div class="related-product-info">
-                                <h2 class="related-heading heading_18">
-                                    <a href="product.html">Tea Table</a>
-                                </h2>
-                                <div
-                                    class="related-review-icon product-icon-star d-flex align-items-center">
-                                    <img src="asset/img/icon/star.png" alt="img">
-                                    <img src="asset/img/icon/star.png" alt="img">
-                                    <img src="asset/img/icon/star.png" alt="img">
-                                    <img src="asset/img/icon/star.png" alt="img">
-                                    <img src="asset/img/icon/star.png" alt="img">
-                                </div>
-                                <p class="related-price text_16">$2,546</p>
-                            </div>
-                        </div>
-                        <div class="related-item d-flex">
-                            <div class="related-img-wrapper">
-                                <img class="related-img" src="asset/img/products/furniture/22.jpg"
-                                    alt="img">
-                            </div>
-                            <div class="related-product-info">
-                                <h2 class="related-heading heading_18">
-                                    <a href="product.html">Comfy Sofa</a>
-                                </h2>
-                                <div
-                                    class="related-review-icon product-icon-star d-flex align-items-center">
-                                    <img src="asset/img/icon/star.png" alt="img">
-                                    <img src="asset/img/icon/star.png" alt="img">
-                                    <img src="asset/img/icon/star.png" alt="img">
-                                    <img src="asset/img/icon/star.png" alt="img">
-                                    <img src="asset/img/icon/star.png" alt="img">
-                                </div>
-                                <p class="related-price text_16">$1,526</p>
-                            </div>
-                        </div>
-                        <div class="related-item d-flex">
-                            <div class="related-img-wrapper">
-                                <img class="related-img" src="asset/img/products/furniture/23.jpg"
-                                    alt="img">
-                            </div>
-                            <div class="related-product-info">
-                                <h2 class="related-heading heading_18">
-                                    <a href="product.html">Cusion Chair</a>
-                                </h2>
-                                <div
-                                    class="related-review-icon product-icon-star d-flex align-items-center">
-                                    <img src="asset/img/icon/star.png" alt="img">
-                                    <img src="asset/img/icon/star.png" alt="img">
-                                    <img src="asset/img/icon/star.png" alt="img">
-                                    <img src="asset/img/icon/star.png" alt="img">
-                                    <img src="asset/img/icon/star.png" alt="img">
-                                </div>
-                                <p class="related-price text_16">$1,235</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="filter-widget">
-                    <a href="product.html">
-                        <img class="rounded" src="asset/img/banner/collection.jpg" alt="img">
-                    </a>
                 </div>
             </div>
         </div>
@@ -505,6 +116,7 @@
 
 <script>
 export default {
-    name: 'CategorySidebar'
+    name: 'CategorySidebar',
+    props: ['categories', 'brands']
 }
 </script>
