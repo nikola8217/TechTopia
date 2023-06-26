@@ -38,6 +38,13 @@ class Product extends Model
         ->get();
     }
 
+    public static function getRandomProducts($id) {
+        return DB::table('products')->where('id', '<>', $id)
+            ->inRandomOrder()
+            ->limit(4)
+            ->get();
+    }
+
     public static function createProduct($name, $price, $discount, $price_with_discount, $first_img, $second_img, $category_id, $brand_id) {
         return Product::create([
             'name' => $name,

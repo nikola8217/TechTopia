@@ -62,7 +62,6 @@
                             <div class="product-card-details">
                                 <h3 class="product-card-title">
                                     <a :href="$router.resolve({name: `productDetails`, params: { id: product.id } }).href">{{ product.name }}</a>
-                                    <!-- <a href="collection-left-sidebar.html">{{ product.name }}</a> -->
                                 </h3>
                                 <div v-if="product.discount > 0" class="product-card-price">
                                     <span class="card-price-regular">{{ product.price_with_discount }} RSD</span>

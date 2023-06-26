@@ -37,6 +37,14 @@ class ProductController extends Controller
         ]);
     }
 
+    public function getRandomProducts($id) {
+        $products = Product::getRandomProducts($id);
+
+        return response()->json([
+            "products" => $products
+        ]);
+    }
+
     public function getProduct($id) {
         
         $product = Product::getProduct($id);

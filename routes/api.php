@@ -17,6 +17,7 @@ Route::get('brands', [BrandController::class, 'getBrands']);
 Route::get('brands/{id}', [BrandController::class, 'getBrand']);
 Route::get('products', [ProductController::class, 'getProducts']);
 Route::get('products/{id}', [ProductController::class, 'getProduct']);
+Route::get('randomProducts/{id}', [ProductController::class, 'getRandomProducts']);
 Route::get('blogs', [BlogController::class, 'getBlogs']);
 Route::get('blogs/{id}', [BlogController::class, 'getBlog']);
 
