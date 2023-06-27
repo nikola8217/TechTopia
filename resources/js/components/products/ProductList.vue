@@ -10,7 +10,7 @@
                         <div
                             class="sorting-header text_16 d-flex align-items-center justify-content-end">
                             <span class="sorting-title me-2">Sort by:</span>
-                            <span class="active-sorting">Featured</span>
+                            <span class="active-sorting">{{ sort }}</span>
                             <span class="sorting-icon">
                                 <svg class="icon icon-down feather feather-chevron-down" xmlns="http://www.w3.org/2000/svg"
                                     width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -21,13 +21,11 @@
                             </span>
                         </div>
                         <ul class="sorting-lists list-unstyled m-0">
-                            <li><a href="#" class="text_14">Featured</a></li>
-                            <li><a href="#" class="text_14">Alphabetically, A-Z</a></li>
-                            <li><a href="#" class="text_14">Alphabetically, Z-A</a></li>
-                            <li><a href="#" class="text_14">Price, low to high</a></li>
-                            <li><a href="#" class="text_14">Price, high to low</a></li>
-                            <li><a href="#" class="text_14">Date, old to new</a></li>
-                            <li><a href="#" class="text_14">Date, new to old</a></li>
+                            <li><a  class="text_14" @click="applySort('featured')">Featured</a></li>
+                            <li><a  class="text_14" @click="applySort('az')">Alphabetically, A-Z</a></li>
+                            <li><a  class="text_14" @click="applySort('za')">Alphabetically, Z-A</a></li>
+                            <li><a  class="text_14" @click="applySort('lowhigh')">Price, low to high</a></li>
+                            <li><a  class="text_14" @click="applySort('highlow')">Price, high to low</a></li>
                         </ul>
                     </div>
                     <div class="filter-drawer-trigger mobile-filter d-flex align-items-center d-lg-none">
@@ -82,7 +80,42 @@
 <script>
 export default {
     name: 'ProductList',
-    props: ['products']
+    props: ['products'],
+    data() {
+        return {
+            selectedOrder: 'featured',
+            sort: 'Featured',
+        };
+    },
+    methods: {
+        applySort(order) {
+            switch (order) {
+                case 'featured':
+                    this.sort = 'Featured';
+                    break;
+                case 'az':
+                    this.sort = 'Alphabetically, A-Z';
+                    break;
+                case 'za':
+                    this.sort = 'Alphabetically, Z-A';
+                    break;
+                case 'lowhigh':
+                    this.sort = 'Price, low to high';
+                    break;
+                case 'highlow':
+                    this.sort = 'Price, high to low';
+                    break;
+                default: 
+                    this.sort = 'Featured';
+            }
+
+            this.selectedOrder = order;
+
+            this.$emit('filters-updated', {
+                sortBy: this.selectedOrder 
+            });
+        }
+    }
 
 }
 </script>

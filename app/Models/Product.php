@@ -21,8 +21,43 @@ class Product extends Model
         'brand_id'
     ];
 
-    public static function getProducts() {
-        return Product::all();
+    public static function getProducts($request) {
+
+        $query = Product::query();
+
+        if (isset($request['sortBy'])) {
+            $sortBy = $request['sortBy'];
+        
+            switch ($sortBy) {
+              case 'featured':
+                $query = $query->orderByDesc('created_at');
+                break;
+              case 'az':
+                $query = $query->orderBy('name');
+                break;
+              case 'za':
+                $query = $query->orderByDesc('name');
+                break;
+              case 'lowhigh':
+                $query = $query->orderBy('price_with_discount');
+                break;
+              case 'highlow':
+                $query = $query->orderByDesc('price_with_discount');
+                break;
+              default:
+                $query = $query->orderByDesc('created_at');
+            }
+          }
+
+        if (isset($request['categories'])) $query->whereIn('category_id', $request['categories']);
+        
+        if (isset($request['brands'])) $query->whereIn('brand_id', $request['brands']);
+
+        if (isset($request['priceFrom'])) $query->where('price', '>=', $request['priceFrom']);
+
+        if (isset($request['priceTo'])) $query->where('price', '<=', $request['priceTo']);
+
+        return $query->get();
     }
 
     public static function getProductByCategory($id) {

@@ -3,8 +3,8 @@
     <div class="collection mt-100">
       <div class="container">
         <div class="row">
-          <CategorySidebar :categories="categories" :brands="brands" />
-          <ProductList :products="products" />
+          <CategorySidebar :categories="categories" :brands="brands" @filters-updated="getProducts" />
+          <ProductList :products="products" @filters-updated="getProducts" />
           
         </div>
       </div>
@@ -55,8 +55,8 @@ export default {
           });
     },
 
-    async getProducts() {
-      await axios.get('/api/products')
+    async getProducts(filterParams) {
+      await axios.get('/api/products', { params: filterParams })
           .then(response => {
               this.products = response.data.products;
           })

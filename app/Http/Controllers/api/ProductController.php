@@ -19,9 +19,9 @@ class ProductController extends Controller
         $this->editProductAction = $editProductAction;
     }
 
-    public function getProducts() {
+    public function getProducts(Request $request) {
         
-        $products = Product::getProducts();
+        $products = Product::getProducts($request->all());
     
         return response()->json([
             "products" => $products
