@@ -108,12 +108,23 @@
             </div>
         </header>
         <!-- header end -->
+        <CartDrawer />
     </div>
 </template>
 
 <script>
+import CartDrawer from './CartDrawer.vue'
+
 export default {
     name: 'Navbar',
+    components: {
+        CartDrawer
+    },
+    computed: {
+        showCartDrawer() {
+        return this.$route.path !== '/cart';
+        }
+    },
     data() {
         return {
             role_id: localStorage.getItem('role_id') ? localStorage.getItem('role_id') : null

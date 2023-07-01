@@ -2,6 +2,7 @@
     <div>
         <Navbar />
         <Drawer />
+        <!-- <CartDrawer /> -->
     </div>
 
 
@@ -11,12 +12,14 @@
 
 import Navbar from './Navbar.vue';
 import Drawer from './Drawer.vue';
+// import CartDrawer from './CartDrawer.vue';
 
 export default {
     name: 'Header',
     components: {
         Navbar,
-        Drawer
+        Drawer,
+        // CartDrawer
     }
 }
 </script>

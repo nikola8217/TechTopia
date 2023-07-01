@@ -17,6 +17,7 @@ import ProductsAdmin from './pages/admin/Products.vue';
 import ProductsForm from './pages/admin/forms/Products.vue';
 import BlogsManager from './pages/manager/Blogs.vue';
 import BlogsForm from './pages/manager/forms/Blogs.vue';
+import Cart from './pages/Cart.vue';
 
 const routes = [
   {
@@ -114,6 +115,11 @@ const routes = [
     path: '/blogsForm/:id?',
     component: BlogsForm,
     name: 'blogsForm'
+  },
+  {
+    path: '/cart',
+    component: Cart,
+    name: '/cart'
   },
 ];
 

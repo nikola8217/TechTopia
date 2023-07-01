@@ -63,11 +63,11 @@
 
                         <div class="misc d-flex align-items-end justify-content-between mt-4">
                             <div class="quantity d-flex align-items-center justify-content-between">
-                                <input class="form-control" type="number" name="qty" value="1" min="0">
+                                <input class="form-control" type="number" v-model="quantity" name="qty" min="0">
                             </div>
                         </div>
 
-                        <form class="product-form" action="#">
+                        <form class="product-form" @submit="addToCart">
                             <div class="buy-it-now-btn mt-2">
                                 <button type="submit" class="position-relative btn-atc btn-buyit-now">ADD TO CART</button>
                             </div>
@@ -112,6 +112,7 @@
 
 <script>
 import axios from 'axios';
+import Swal from 'sweetalert2';
 
 export default {
     name: "Details",
@@ -126,14 +127,14 @@ export default {
             discount: '',
             price_with_discount: '',
             first_img: '',
-            second_img: ''
+            second_img: '',
+            quantity: 1,
         }
     },
     methods: {
         async getProduct() {
             await axios.get(`/api/products/${this.product_id}`)
                 .then(response => {
-                    console.log(response)
                     this.name = response.data.product.name;
                     this.price = response.data.product.price;
                     this.discount = response.data.product.discount;
@@ -143,6 +144,53 @@ export default {
                 }).catch(error => {
                     console.log(error);
                 });
+        },
+
+        addToCart(e) {
+            e.preventDefault();
+            
+            let product = {
+                id: this.product_id,
+                name: this.name,
+                img: this.first_img,
+                price: this.price_with_discount,
+                quantity: this.quantity
+            };
+
+            let cart = localStorage.getItem('cart');
+
+            if (cart) {
+                cart = JSON.parse(cart);
+            } else {
+                cart = [];
+            }
+
+            const index = cart.findIndex(item => item.id === product.id);
+            if (index !== -1) {
+                cart[index].quantity += this.quantity;
+            } else {
+                cart.push(product);
+            }
+            
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            Swal.fire({
+                icon: 'success',
+                title: 'Product is added to your cart',
+                showDenyButton: true,
+                showCancelButton: true,
+                confirmButtonText: 'Go to cart',
+                confirmButtonColor: '#28a745',
+                denyButtonText: `Continue shopping`,
+                denyButtonColor: '#007bff', 
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = '/cart';
+                } else if (result.isDenied) {
+                    window.location.href = '/products';
+                }
+            })
+
         }
     }
 }
