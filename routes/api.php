@@ -8,6 +8,7 @@ use App\Http\Controllers\api\ProductController;
 use App\Http\Controllers\api\BlogController;
 use App\Http\Controllers\api\CommentController;
 use App\Http\Controllers\api\BrandController;
+use App\Http\Controllers\api\OrderController;
 
 Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
@@ -20,6 +21,7 @@ Route::get('products/{id}', [ProductController::class, 'getProduct']);
 Route::get('randomProducts/{id}', [ProductController::class, 'getRandomProducts']);
 Route::get('blogs', [BlogController::class, 'getBlogs']);
 Route::get('blogs/{id}', [BlogController::class, 'getBlog']);
+Route::post('orders', [OrderController::class, 'createOrder']);
 
 Route::group(['middleware' => 'jwt.auth'], function () {
     // users

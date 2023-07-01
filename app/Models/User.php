@@ -93,4 +93,12 @@ class User extends Authenticatable implements JWTSubject
             'points' => $points
         ]);
     }
+
+    public static function updatePoints($user_id) {
+        $points = User::where('id', $user_id)->first()->points;
+
+        return User::where('id', $user_id)->update([
+            'points' => $points + 10
+        ]);
+    }
 }
