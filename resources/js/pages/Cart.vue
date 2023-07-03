@@ -60,9 +60,10 @@
                                 </div>
                                 <hr />
                                 <div class="d-flex justify-content-center mt-4">
-                                    <a href="checkout.html" class="position-relative btn-primary text-uppercase">
-                                        Procced to checkout
-                                    </a>
+                                    <a :href="$router.resolve({name: 'checkout'}).href" class="position-relative btn-primary text-uppercase">Procced to checkout</a>
+                                    <!-- <a href="checkout.html" class="position-relative btn-primary text-uppercase"> -->
+                                        
+                                    <!-- </a> -->
                                 </div>
                             </div>
                         </div>

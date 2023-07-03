@@ -38,8 +38,8 @@
                         </p>
                     </div>
                     <div class="minicart-btn-area d-flex align-items-center justify-content-between">
-                        <a href="cart.html" class="minicart-btn btn-secondary">View Cart</a>
-                        <a href="checkout.html" class="minicart-btn btn-primary">Checkout</a>
+                        <a :href="$router.resolve({name: 'cart'}).href" class="minicart-btn btn-secondary">View Cart</a>
+                        <a :href="$router.resolve({name: 'checkout'}).href" class="minicart-btn btn-primary">Checkout</a>
                     </div>
                 </div>
             </div>

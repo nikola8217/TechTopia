@@ -16,6 +16,8 @@ class OrderProduct extends Model
         'total_price'
     ];
 
+    protected $table = 'orders_products';
+
     public static function createOrderProduct($order_id, $product_id, $quantity, $total_price) {
         return OrderProduct::create([
             'order_id' => $order_id,
