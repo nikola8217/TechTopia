@@ -18,10 +18,11 @@ class Order extends Model
         'country',
         'zip',
         'total_price',
+        'user_id',
         'status_id',
     ];
 
-    public static function createOrder($name, $email, $phone, $address, $city, $country, $zip, $total_price) {
+    public static function createOrder($name, $email, $phone, $address, $city, $country, $zip, $total_price, $user_id) {
         return Order::create([
             'name' => $name,
             'email' => $email,
@@ -31,6 +32,7 @@ class Order extends Model
             'country' => $country,
             'zip' => $zip,
             'total_price' => $total_price,
+            'user_id' => $user_id,
             'status_id' => 1
         ]);
     }

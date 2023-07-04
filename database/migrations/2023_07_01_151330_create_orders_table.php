@@ -23,6 +23,7 @@ class CreateOrdersTable extends Migration
             $table->string("country");
             $table->integer("zip");
             $table->float("total_price");
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->unsignedBigInteger('status_id');
             $table->timestamps();
         });

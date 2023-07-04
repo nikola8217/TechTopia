@@ -24,7 +24,14 @@ class CreateOrderAction {
     
         if ($validator->fails()) return response()->json(['error' => $validator->errors()->first()]);
 
-        $order = Order::createOrder($request->name, $request->email, $request->phone, $request->address, $request->city, $request->country, $request->zip, $request->total_price);
+        if ($request->user_id && $request->points) {
+            User::resetPoints($request->user_id);
+        }
+        else if ($request->user_id) {
+            User::updatePoints($request->user_id);
+        }
+
+        $order = Order::createOrder($request->name, $request->email, $request->phone, $request->address, $request->city, $request->country, $request->zip, $request->total_price, $request->user_id);
 
         foreach($request->products as $product) {
 
@@ -33,9 +40,8 @@ class CreateOrderAction {
             OrderProduct::createOrderProduct($order->id, $product['id'], $product['quantity'], $price);
         }
 
-        if ($request->points) {
-            User::updatePoints($request->user_id);
-        }
+        
+        
 
         // $subject = 'Order Received';
         // $email = $request->email;

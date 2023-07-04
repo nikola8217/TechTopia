@@ -1,5 +1,5 @@
 <template>
-    <div class="checkout-page mt-100">
+    <div class="checkout-page mt-100" style="margin-bottom: 200px">
                 <div class="container">
                     <div class="checkout-page-wrapper">
                         <div class="row">
@@ -15,19 +15,19 @@
                                                 <div class="col-lg-12 col-md-12 col-12">
                                                     <fieldset>
                                                         <label class="label">Name</label>
-                                                        <input type="text" v-model="name" />
+                                                        <input type="text" v-model="name" :disabled="isDisabled" />
                                                     </fieldset>
                                                 </div>
                                                 <div class="col-lg-6 col-md-12 col-12">
                                                     <fieldset>
                                                         <label class="label">Email</label>
-                                                        <input type="email" v-model="email" />
+                                                        <input type="email" v-model="email" :disabled="isDisabled" />
                                                     </fieldset>
                                                 </div>
                                                 <div class="col-lg-6 col-md-12 col-12">
                                                     <fieldset>
                                                         <label class="label">Phone number</label>
-                                                        <input type="text" v-model="phone" />
+                                                        <input type="text" v-model="phone" v-on:input="restrictToNumbers" />
                                                     </fieldset>
                                                 </div>
                                                 <div class="col-lg-6 col-md-12 col-12">
@@ -39,7 +39,7 @@
                                                 <div class="col-lg-6 col-md-12 col-12">
                                                     <fieldset>
                                                         <label class="label">Zip code</label>
-                                                        <input type="text" v-model="zip" />
+                                                        <input type="text" v-model.number="zip" v-on:input="restrictToNumbers" />
                                                     </fieldset>
                                                 </div>
                                                 <div class="col-lg-6 col-md-12 col-12">
@@ -60,19 +60,19 @@
                                     </div>
                                 </div>
 
-                                <div class="shipping-address-area billing-area">
-                                    <h2 class="shipping-address-heading pb-1">Billing address</h2>
+                                <div class="shipping-address-area billing-area" v-if="user_id && points >= 50">
+                                    <h2 class="shipping-address-heading pb-1">You have enough points</h2>
                                     <div class="form-checkbox d-flex align-items-center mt-4">
-                                        <input class="form-check-input mt-0" type="checkbox">
+                                        <input class="form-check-input mt-0" type="checkbox" @change="handleCheckboxChange">
                                         <label class="form-check-label ms-2">
-                                            Same as shipping address
+                                            Use 20% discount
                                         </label>
                                     </div>
                                 </div>
                                 <div class="shipping-address-area billing-area">
                                     <div class="minicart-btn-area d-flex align-items-center justify-content-between flex-wrap">
                                         <a :href="$router.resolve({name: 'cart'}).href" class="minicart-btn btn-secondary">BACK TO CART</a>
-                                        <a @click="order" class="checkout-page-btn minicart-btn btn-primary">PROCEED TO SHIPPING</a>
+                                        <a @click="order" class="checkout-page-btn minicart-btn btn-primary" style="cursor: pointer">ORDER NOW</a>
                                     </div>
                                 </div>
                             </div>
@@ -112,10 +112,12 @@ import Swal from 'sweetalert2';
 export default {
     mounted() {
         this.calculateSubtotal();
+        if (this.user_id) this.getUser();
     },
     data() {
         return {
             products: localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [],
+            user_id: localStorage.getItem('user_id') ? localStorage.getItem('user_id') : null,
             total: 0,
             total_quantity: 0,
             name: '',
@@ -125,10 +127,16 @@ export default {
             city: '',
             zip: '',
             country: '',
+            points: '',
             havePoints: false,
+            isDisabled: false,
         }
     },
     methods: {
+        restrictToNumbers() {
+            this.phone = this.phone.replace(/\D/g, '');
+            this.zip = this.zip.replace(/\D/g, '');
+        },
 
         calculateSubtotal() {
             if (this.products.length > 0) {
@@ -145,6 +153,17 @@ export default {
             }
         },
 
+        handleCheckboxChange(event) {
+            if (event.target.checked) {
+                this.total = this.total - this.total * 20/100;
+                this.total = this.total.toFixed(2);
+                this.havePoints = true;
+            } else {
+                this.calculateSubtotal();
+                this.havePoints = false;
+            }
+        },
+
         async order() {
             await axios.post('api/orders', {
                 name: this.name,
@@ -156,7 +175,8 @@ export default {
                 country: this.country,
                 points: this.havePoints,
                 total_price: this.total,
-                products: this.products
+                products: this.products,
+                user_id: this.user_id
             }).then((response) => {
                 if(response.data.error){    
                     Swal.fire({
@@ -179,7 +199,22 @@ export default {
             }).catch((error) => {
                 console.log(error);
             });
-        }
+        },
+
+        async getUser() {
+            await axios.get(`/api/users/${this.user_id}`, {
+                headers: {
+                    Authorization: `Bearer ${localStorage.getItem('token')}`
+                }
+            }).then(response => {
+                this.points = response.data.user.points;
+                this.name = response.data.user.name;
+                this.email = response.data.user.email;
+                this.isDisabled = true;
+            }).catch(error => {
+                console.log(error);
+            });
+        },
     }
     
 }
