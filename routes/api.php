@@ -22,6 +22,7 @@ Route::get('randomProducts/{id}', [ProductController::class, 'getRandomProducts'
 Route::get('blogs', [BlogController::class, 'getBlogs']);
 Route::get('blogs/{id}', [BlogController::class, 'getBlog']);
 Route::post('orders', [OrderController::class, 'createOrder']);
+Route::get('comments/{blog_id}', [CommentController::class, 'getComments']);
 
 Route::group(['middleware' => 'jwt.auth'], function () {
     // users
@@ -49,7 +50,7 @@ Route::group(['middleware' => 'jwt.auth'], function () {
     Route::delete('blogs/{id}', [BlogController::class, 'deleteBlog']);
     // products 
     Route::post('comments/{blog_id}', [CommentController::class, 'createCommentBlog']);
-    Route::post('comments/{product_id}', [CommentController::class, 'createCommentProduct']);
+    Route::delete('comments/{id}', [CommentController::class, 'deleteComment']);
 
 });
 

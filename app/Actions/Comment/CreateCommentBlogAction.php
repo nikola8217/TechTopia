@@ -14,11 +14,11 @@ class CreateCommentBlogAction {
             'body' => 'required',
         ]);
     
-        if ($validator->fails()) return response()->json(['error' => $validator->errors()->first()], 400);
+        if ($validator->fails()) return response()->json(['error' => $validator->errors()->first()]);
         
         $comment = Comment::createComment($request->body);
         $blog = Blog::getBlog($blog_id);
-        $comment_blog = CommentBlog::createUserRole($comment->id, $blog->id);
+        $comment_blog = CommentBlog::createCommentBlog($comment->id, $blog->id);
     
         return response()->json([
             'success' => 'You have successfully leave comment!',

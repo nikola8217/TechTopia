@@ -9,6 +9,11 @@ class CommentBlog extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'comment_id',
+        'blog_id'
+    ];
+
     protected $table = 'comments_blogs';
 
     public static function createCommentBlog($comment_id, $blog_id){

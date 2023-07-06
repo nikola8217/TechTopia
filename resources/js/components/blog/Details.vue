@@ -49,16 +49,20 @@
                             </div>
                         </div>
                     </div>
+                    <CommentList />
                 </div>
             </div>  
 </template>
 
 <script>
 import axios from 'axios';
-import Swal from 'sweetalert2';
+import CommentList from '../comments/CommentList.vue';
 
 export default {
     name: "BlogsForm",
+    components: {
+        CommentList
+    },
     mounted() {
         this.getBlog();
     },
