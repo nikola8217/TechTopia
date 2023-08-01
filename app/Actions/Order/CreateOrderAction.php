@@ -40,19 +40,16 @@ class CreateOrderAction {
             OrderProduct::createOrderProduct($order->id, $product['id'], $product['quantity'], $price);
         }
 
-        
-        
+        $subject = 'Order Received';
+        $email = $request->email;
+        $content = 'Your order is received. Than you for your trust!';
 
-        // $subject = 'Order Received';
-        // $email = $request->email;
-        // $content = 'Your order is received. Than you for your trust!';
-
-        // Mail::send([], [], function ($message) use ($subject, $email, $content) {
-        //     $message->to($email)
-        //     ->from('gileer404@gmail.com')
-        //     ->subject($subject)
-        //     ->setBody($content, 'text/html');
-        // });
+        Mail::send([], [], function ($message) use ($subject, $email, $content) {
+            $message->to($email)
+            ->from('gileer404@gmail.com')
+            ->subject($subject)
+            ->setBody($content, 'text/html');
+        });
 
         return response()->json([
             'success' => 'Successfully Ordered!',
