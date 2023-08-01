@@ -1,5 +1,5 @@
 <template>
-    <div class="comment-form-area" v-if="user_id">
+    <div class="comment-form-area" v-if="user_id && role_id && role_id != 3">
         <div class="form-header">
             <h4 class="form-title">Leave A Comment</h4>
         </div>
@@ -39,6 +39,7 @@ export default {
     data() {
         return {
             user_id: localStorage.getItem('user_id') ? localStorage.getItem('user_id') : null,
+            role_id: localStorage.getItem('role_id') ? localStorage.getItem('role_id') : null,
             name: '',
             blog_id: this.$route.params.id,
             body: '',

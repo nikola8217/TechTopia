@@ -22,7 +22,9 @@
                                         {{ blog.id }}
                                     </td>
                                     <td>
-                                        {{ blog.title }}                                    
+                                        <a class="heading_18" style="font-size: 14px; cursor: pointer" @click="getDetails(blog.id)">
+                                            {{ blog.title }}
+                                        </a>                                    
                                     </td>
                                     <td>
                                         <div class="btn-group" style="float: right;">
@@ -105,6 +107,10 @@ export default {
                     });
                 }
             });
+        },
+
+        getDetails(id) {
+            window.location.href = `/blogDetails/${id}`
         }
     }
 }

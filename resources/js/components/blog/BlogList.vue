@@ -22,7 +22,7 @@
                                 </span>
                             </p>
                             <h2 class="article-card-heading heading_18">
-                                <a class="heading_18" @click="getDetails(blog.id)">
+                                <a class="heading_18" @click="getDetails(blog.id)" style="cursor: pointer">
                                     {{ blog.title }}
                                 </a>
                             </h2>

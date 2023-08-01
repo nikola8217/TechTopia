@@ -22,7 +22,7 @@
                             </div>
                             <p class="comments">{{ comment.body }}</p>
                         </div>
-                        <button v-if="user_id && user_id == comment.user_id" type="button" @click="deleteComment(comment.comment_id)" class="btn-reply bg-transparent d-flex align-items-center">
+                        <button v-if="user_id && (user_id == comment.user_id || role_id == 3)" type="button" @click="deleteComment(comment.comment_id)" class="btn-reply bg-transparent d-flex align-items-center">
                             <span class="btn-reply-text">Delete</span>
                         </button>
                     </div>
