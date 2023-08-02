@@ -7,23 +7,25 @@ use Illuminate\Http\Request;
 use App\Actions\Auth\RegisterAction;
 use App\Actions\Auth\LoginAction;
 use App\Actions\Auth\EditUserAction;
+use App\Actions\Auth\ChangePasswordAction;
 use App\Models\User;
 use App\Models\UserRole;
 use App\Models\Role;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Session;
+
 
 class AuthController extends Controller
 {
     protected $registerAction;
     protected $loginAction;
     protected $editUserAction;
+    protected $changePasswordAction;
 
-    public function __construct(RegisterAction $registerAction, LoginAction $loginAction, EditUserAction $editUserAction)
+    public function __construct(RegisterAction $registerAction, LoginAction $loginAction, EditUserAction $editUserAction, ChangePasswordAction $changePasswordAction)
     {
         $this->registerAction = $registerAction;
         $this->loginAction = $loginAction;
         $this->editUserAction = $editUserAction;
+        $this->changePasswordAction = $changePasswordAction;
     }
 
     public function register(Request $request) {
@@ -72,6 +74,10 @@ class AuthController extends Controller
         return response()->json([
             'roles' => $roles 
         ]);
+    }
+
+    public function changePassword(Request $request, $id) {
+        return $this->changePasswordAction->execute($request, $id);
     }
 
 }

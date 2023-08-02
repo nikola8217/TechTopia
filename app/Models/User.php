@@ -109,4 +109,10 @@ class User extends Authenticatable implements JWTSubject
             'points' => $points - 50
         ]);
     }
+
+    public static function changePassword($id, $pass) {
+        return User::where('id', $id)->update([
+            'password' => Hash::make($pass), 
+        ]);
+    }
 }

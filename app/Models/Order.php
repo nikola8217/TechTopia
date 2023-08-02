@@ -40,6 +40,25 @@ class Order extends Model
             ->get();
     }
 
+    public static function getOrdersByUser($id) {
+        return DB::table('orders')
+            ->join('orders_status', 'orders.status_id', '=', 'orders_status.id')
+            ->select('orders.id AS id',
+                    'orders.name AS username',
+                    'orders.email AS email',
+                    'orders.phone AS phone',
+                    'orders.address AS address',
+                    'orders.city AS city',
+                    'orders.country AS country',
+                    'orders.zip AS zip',
+                    'orders.total_price AS price',
+                    'orders.created_at AS createdAt',
+                    'orders.status_id AS status_id',
+                    'orders_status.name')
+            ->where('orders.user_id', $id)
+            ->get();
+    }
+
     public static function getOrder($id) {
         return DB::table('orders')
             ->join('orders_status', 'orders.status_id', '=', 'orders_status.id')

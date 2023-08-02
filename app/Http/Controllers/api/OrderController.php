@@ -28,6 +28,14 @@ class OrderController extends Controller
         ]);
     }
 
+    public function getOrdersUser($id) {
+        $orders = Order::getOrdersByUser($id);
+
+        return response()->json([
+            'orders' => $orders 
+        ]);
+    }
+
     public function getOrder($id) {
         $order = Order::getOrder($id);
         

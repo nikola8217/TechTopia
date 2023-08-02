@@ -21,6 +21,7 @@ import Cart from './pages/Cart.vue';
 import Checkout from './pages/Checkout.vue';
 import Orders from './pages/manager/Orders.vue';
 import OrderDetails from './pages/manager/OrderDetails.vue';
+import Profile from './pages/Profile.vue';
 
 const routes = [
   {
@@ -138,6 +139,11 @@ const routes = [
     path: '/orders/:id',
     component: OrderDetails,
     name: 'orderDetails'
+  },
+  {
+    path: '/profile',
+    component: Profile,
+    name: 'profile'
   },
 ];
 

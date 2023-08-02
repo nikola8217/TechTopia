@@ -33,6 +33,7 @@ Route::group(['middleware' => 'jwt.auth'], function () {
     Route::get('users', [AuthController::class, 'getUsers']);
     Route::get('users/{id}', [AuthController::class, 'getUser']);
     Route::put('users/{id}', [AuthController::class, 'editUser']);
+    Route::put('changePassword/{id}', [AuthController::class, 'changePassword']);
     Route::delete('users/{id}', [AuthController::class, 'deleteUser']);
     Route::get('roles', [AuthController::class, 'getRoles']);
     // categories 
@@ -59,6 +60,7 @@ Route::group(['middleware' => 'jwt.auth'], function () {
     Route::get('orders', [OrderController::class, 'getOrders']);
     Route::put('changeStatus', [OrderController::class, 'changeStatus']);
     Route::delete('orders/{id}', [OrderController::class, 'deleteOrder']);
+    Route::get('ordersUser/{id}', [OrderController::class, 'getOrdersUser']);
 
 });
 

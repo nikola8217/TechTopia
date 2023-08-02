@@ -31,6 +31,9 @@
                                         <a :href="$router.resolve({name: 'contact'}).href" class="nav-link">Contact</a>
                                     </li>
                                     <li class="menu-list-item nav-item">
+                                        <a :href="$router.resolve({name: 'profile'}).href" class="nav-link">Profile</a>
+                                    </li>
+                                    <li class="menu-list-item nav-item">
                                         <a @click="logout" class="nav-link">Logout</a>
                                     </li>
                                 </ul>

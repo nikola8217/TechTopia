@@ -18,7 +18,8 @@
                                     <p class="checkout-user-address mb-0">{{ status }}</p>
                                 </div>
                                 
-                                <button class="edit-user btn-secondary" :disabled='isDisabled' @click="changeStatus">NEXT STEP</button>
+                                <button v-if="role_id && role_id == 3" class="edit-user btn-secondary" :disabled='isDisabled' @click="changeStatus">NEXT STEP</button>
+                                <button v-else class="edit-user btn-secondary"  @click="deleteOrder()">CANCEL ORDER</button>
                             </div>
                         </div>
                     </div>
@@ -41,6 +42,7 @@ export default {
     data() {
         return {
             order_id: this.$route.params.id,
+            role_id: localStorage.getItem('role_id') ? localStorage.getItem('role_id') : null,
             name: '',
             email: '',
             phone: '',
@@ -99,7 +101,39 @@ export default {
             }).catch((error) => {
                 console.log(error);
             });
-        }
+        },
+
+        async deleteOrder() {
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Yes, delete it!',
+                cancelButtonText: 'Cancel'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    axios.delete(`/api/orders/${this.order_id}`, {
+                        headers: {
+                        Authorization: `Bearer ${localStorage.getItem('token')}`
+                        }
+                    })
+                    .then(response => {
+                        Swal.fire(
+                            'Deleted!',
+                            response.data.success,
+                            'success'
+                        );
+                        window.location.href = '/profile';
+                    })
+                    .catch(error => {
+                        console.error(error);
+                    });
+                }
+            });
+        },
     }
+
+    
 }
 </script>
