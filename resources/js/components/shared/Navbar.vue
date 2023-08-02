@@ -53,6 +53,9 @@
                                         <a :href="$router.resolve({name: 'blogsManager'}).href" class="nav-link">Blogs</a>
                                     </li>
                                     <li class="menu-list-item nav-item">
+                                        <a :href="$router.resolve({name: 'orders'}).href" class="nav-link">Orders</a>
+                                    </li>
+                                    <li class="menu-list-item nav-item">
                                         <a @click="logout" class="nav-link">Logout</a>
                                     </li>
                                 </ul>

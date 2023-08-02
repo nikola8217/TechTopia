@@ -19,6 +19,8 @@ import BlogsManager from './pages/manager/Blogs.vue';
 import BlogsForm from './pages/manager/forms/Blogs.vue';
 import Cart from './pages/Cart.vue';
 import Checkout from './pages/Checkout.vue';
+import Orders from './pages/manager/Orders.vue';
+import OrderDetails from './pages/manager/OrderDetails.vue';
 
 const routes = [
   {
@@ -126,6 +128,16 @@ const routes = [
     path: '/checkout',
     component: Checkout,
     name: 'checkout'
+  },
+  {
+    path: '/orders',
+    component: Orders,
+    name: 'orders'
+  },
+  {
+    path: '/orders/:id',
+    component: OrderDetails,
+    name: 'orderDetails'
   },
 ];
 
