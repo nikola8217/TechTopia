@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 class Blog extends Model
 {
@@ -24,7 +25,20 @@ class Blog extends Model
     }
 
     public static function getBlogs() {
-        return Blog::all();
+        $blogs = Blog::all();
+
+        // Mapiranje blogova i formatiranje created_at polja
+        $formattedBlogs = $blogs->map(function ($blog) {
+        return [
+            'id' => $blog->id,
+            'title' => $blog->title,
+            'content' => $blog->content,
+            'created_at' => $blog->created_at->format('j F Y'),
+            'img' => $blog->img
+        ];
+    });
+
+    return $formattedBlogs;
     }
 
     public static function getBlog($id) {

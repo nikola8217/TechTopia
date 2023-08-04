@@ -94,7 +94,7 @@
                                         <hr />
                                         <div class="subtotal-item discount-box">
                                             <h4 class="subtotal-title">Total:</h4>
-                                            <p class="subtotal-value">{{ total }}</p>
+                                            <p class="subtotal-value">{{ total }} RSD</p>
                                         </div>
                                     </div>
                                 </div>

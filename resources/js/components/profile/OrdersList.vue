@@ -51,7 +51,10 @@ export default {
             })
                 .then(response => {
                     this.orders = response.data.orders;
-                    console.log(this.orders);
+                    this.orders = response.data.orders.map(order => ({
+                        ...order,
+                        price: order.price.toFixed(2)
+                    }));
                 })
                 .catch(error => {
                     console.log(error);

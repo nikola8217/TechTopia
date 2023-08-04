@@ -12,8 +12,8 @@
                             </div>
                             <div class="contact-details">
                                 <h2 class="contact-title">Mail Address</h2>
-                                <a class="contact-info" href="mailto:info@example.com">info@example.com</a>
-                                <a class="contact-info" href="mailto:info2@example.com">info2@example.com</a>
+                                <p class="contact-info">gileer404@gmail.com</p>
+                                <p class="contact-info">nikola8217@its.edu.rs</p>
                             </div>
                         </div>
                     </div>
@@ -26,7 +26,7 @@
                             </div>
                             <div class="contact-details">
                                 <h2 class="contact-title">Office Location</h2>
-                                <p class="contact-info">2715 Ash Dr. San Jose, South Dakota 83475</p>
+                                <p class="contact-info">Novaka Djokovica 85, 11000 Beograd</p>
                             </div>
                         </div>
                     </div>
@@ -39,8 +39,8 @@
                             </div>
                             <div class="contact-details">
                                 <h2 class="contact-title">Phone Number</h2>
-                                <a class="contact-info" href="tel:(201) 555-0124">(201) 555-0124</a>
-                                <a class="contact-info" href="tel:(307) 555-0133">(307) 555-0133</a>
+                                <p class="contact-info">(+381) 62-8254-103</p>
+                                <p class="contact-info">(012) 280-324</p>
                             </div>
                         </div>
                     </div>

@@ -59,6 +59,10 @@ export default {
       await axios.get('/api/products', { params: filterParams })
           .then(response => {
               this.products = response.data.products;
+              this.products = response.data.products.map(product => ({
+                ...product,
+                price: product.price.toFixed(2)
+              }));
           })
           .catch(error => {
               console.log(error);

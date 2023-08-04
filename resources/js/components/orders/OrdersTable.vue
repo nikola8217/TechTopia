@@ -1,5 +1,5 @@
 <template>
-    <div class="cart-page mt-100">
+    <div class="cart-page mt-100" style="margin-bottom: 100px">
         <div class="container">
             <div class="cart-page-wrapper">
                 <div class="row">
@@ -88,7 +88,10 @@ export default {
             })
                 .then(response => {
                     this.orders = response.data.orders;
-                    console.log(this.orders);
+                    this.orders = response.data.orders.map(order => ({
+                        ...order,
+                        price: order.price.toFixed(2)
+                    }));
                 })
                 .catch(error => {
                     console.log(error);

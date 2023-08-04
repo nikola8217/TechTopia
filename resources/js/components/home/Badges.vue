@@ -12,7 +12,7 @@
                                     <div class="trusted-content">
                                         <h2 class="heading_18 trusted-heading">Free Shipping & Return</h2>
                                         <p class="text_16 trusted-subheading trusted-subheading-2">On all order over
-                                            $99.00</p>
+                                            10000 RSD</p>
                                     </div>
                                 </div>
                             </div>

@@ -24,13 +24,7 @@
 
                                     </div>
                                     <div class="product-card-details">
-                                        <ul class="color-lists list-unstyled d-flex align-items-center">
-                                            <li><a href="javascript:void(0)"
-                                                    class="color-swatch swatch-black active"></a></li>
-                                            <li><a href="javascript:void(0)" class="color-swatch swatch-cyan"></a></li>
-                                            <li><a href="javascript:void(0)" class="color-swatch swatch-purple"></a>
-                                            </li>
-                                        </ul>
+                                        
                                         <h3 class="product-card-title">
                                             <a href="collection-left-sidebar.html">{{ product.name }}</a>
                                         </h3>
@@ -71,6 +65,10 @@ export default {
       await axios.get(`/api/randomProducts/${this.$route.params.id}`)
           .then(response => {
               this.products = response.data.products;
+              this.products = response.data.products.map(product => ({
+                ...product,
+                price: product.price.toFixed(2)
+              }));
           })
           .catch(error => {
               console.log(error);

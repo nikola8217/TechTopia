@@ -22,128 +22,153 @@ import Checkout from './pages/Checkout.vue';
 import Orders from './pages/manager/Orders.vue';
 import OrderDetails from './pages/manager/OrderDetails.vue';
 import Profile from './pages/Profile.vue';
+import { checkIsAuth, checkIsGuest, checkIsAdmin, checkIsManager, checkIsGuestOrUser } from './protection.js';
 
 const routes = [
   {
     path: '/',
     component: Home,
-    name: 'home'
+    name: 'home',
+    beforeEnter: checkIsGuestOrUser
   },
   {
     path: '/about',
     component: About,
-    name: 'about'
+    name: 'about',
+    beforeEnter: checkIsGuestOrUser
   },
   {
     path: '/products',
     component: Products,
-    name: 'products'
+    name: 'products',
+    beforeEnter: checkIsGuestOrUser
   },
   {
     path: '/productDetails/:id',
     component: ProductDetails,
-    name: 'productDetails'
+    name: 'productDetails',
+    beforeEnter: checkIsGuestOrUser
   },
   {
     path: '/blog',
     component: Blog,
-    name: 'blog'
+    name: 'blog',
+    beforeEnter: checkIsGuestOrUser
   },
   {
     path: '/blogDetails/:id',
     component: BlogDetails,
-    name: 'blogDetails'
+    name: 'blogDetails',
+    beforeEnter: checkIsGuestOrUser
   },
   {
     path: '/contact',
     component: Contact,
-    name: 'contact'
+    name: 'contact',
+    beforeEnter: checkIsGuestOrUser
   },
   {
     path: '/login',
     component: Login,
-    name: 'login'
+    name: 'login',
+    beforeEnter: checkIsGuest
   },
   {
     path: '/register',
     component: Register,
-    name: 'register'
+    name: 'register',
+    beforeEnter: checkIsGuest
   },
   {
     path: '/users',
     component: Users,
-    name: 'users'
+    name: 'users',
+    beforeEnter: checkIsAdmin
   },
   {
     path: '/usersForm/:id',
     component: UsersForm,
     name: 'usersForm',
-    props: true
+    props: true,
+    beforeEnter: checkIsAdmin
   },
   {
     path: '/categories',
     component: Categories,
-    name: 'categories'
+    name: 'categories',
+    beforeEnter: checkIsAdmin
   },
   {
     path: '/categoriesForm/:id?',
     component: CategoriesForm,
     name: 'categoriesForm',
+    beforeEnter: checkIsAdmin
   },
   {
     path: '/brands',
     component: Brands,
-    name: 'brands'
+    name: 'brands',
+    beforeEnter: checkIsAdmin
   },
   {
     path: '/brandsForm/:id?',
     component: BrandsForm,
     name: 'brandsForm',
+    beforeEnter: checkIsAdmin
   },
   {
     path: '/productsAdmin/:id',
     component: ProductsAdmin,
     name: 'productsAdmin',
+    beforeEnter: checkIsAdmin
   },
   {
     path: '/productsForm/:id/:product_id?',
     component: ProductsForm,
     name: 'productsForm',
+    beforeEnter: checkIsAdmin
   },
   {
     path: '/blogsManager',
     component: BlogsManager,
-    name: 'blogsManager'
+    name: 'blogsManager',
+    beforeEnter: checkIsManager
   },
   {
     path: '/blogsForm/:id?',
     component: BlogsForm,
-    name: 'blogsForm'
+    name: 'blogsForm',
+    beforeEnter: checkIsManager
   },
   {
     path: '/cart',
     component: Cart,
-    name: 'cart'
+    name: 'cart',
+    beforeEnter: checkIsGuestOrUser
   },
   {
     path: '/checkout',
     component: Checkout,
-    name: 'checkout'
+    name: 'checkout',
+    beforeEnter: checkIsGuestOrUser
   },
   {
     path: '/orders',
     component: Orders,
-    name: 'orders'
+    name: 'orders',
+    beforeEnter: checkIsManager
   },
   {
     path: '/orders/:id',
     component: OrderDetails,
-    name: 'orderDetails'
+    name: 'orderDetails',
+    beforeEnter: checkIsManager
   },
   {
     path: '/profile',
     component: Profile,
-    name: 'profile'
+    name: 'profile',
+    beforeEnter: checkIsAuth
   },
 ];
 

@@ -1,5 +1,5 @@
 <template>
-    <div class="checkout-page mt-100">
+    <div class="checkout-page mt-100" style="margin-bottom: 100px">
         <div class="container">
             <div class="col-xl-12 col-lg-12 col-md-12 col-12">
                 

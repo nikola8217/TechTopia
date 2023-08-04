@@ -3,7 +3,7 @@
             <div class="filter-sort-wrapper d-flex justify-content-between flex-wrap">
                 <div class="collection-title-wrap d-flex align-items-end">
                     <h2 class="collection-title heading_24 mb-0">All products</h2>
-                    <p class="collection-counter text_16 mb-0 ms-2">({{ product_count }} {{ product_count === 1 ? 'item' : 'items' }})</p>
+                    <p class="collection-counter text_16 mb-0 ms-2">({{ products.length }} {{ products.length === 1 ? 'item' : 'items' }})</p>
                 </div>
                 <div class="filter-sorting">
                     <div class="collection-sorting position-relative d-none d-lg-block">

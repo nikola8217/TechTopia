@@ -1,5 +1,5 @@
 <template>
-    <div class="cart-page mt-100">
+    <div class="cart-page mt-100" style="margin-bottom: 100px">
         <div class="container">
             <div class="cart-page-wrapper">
                 <div class="row">
@@ -26,7 +26,7 @@
                                         {{ product.product_id }}
                                     </td>
                                     <td>
-                                        {{ product.name }}                                    
+                                        {{ product.name }}                                 
                                     </td>
                                     <td>
                                         {{ product.brand_name }}                                    
@@ -83,6 +83,11 @@ export default {
             })
                 .then(response => {
                     this.products = response.data.products;
+                    this.products = response.data.products.map(product => ({
+                        ...product,
+                        price: product.price.toFixed(2),
+                        price_with_discount: product.price_with_discount.toFixed(2)
+                    }));
                 })
                 .catch(error => {
                     console.log(error);

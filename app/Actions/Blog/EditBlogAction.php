@@ -16,9 +16,9 @@ class EditBlogAction {
     
         if ($validator->fails()) return response()->json(['error' => $validator->errors()->first()]);
         
-        if (Blog::where('title', $request->title)->first()) return response()->json(['error' => 'Blog with this title already exists!']);
+        if (Blog::where('title', '=', $request->title)->where('id', '!=', $id)->first()) return response()->json(['error' => 'Blog with this title already exists!']);
 
-        $blog = Blog::editBlog($id, $request->title, $request->img, $request->body);
+        $blog = Blog::editBlog($id, $request->title, $request->body, $request->img);
 
         return response()->json([
             'success' => 'Blog is successfully updated!',

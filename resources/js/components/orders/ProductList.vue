@@ -59,7 +59,10 @@ export default {
             await axios.get(`/api/orderProducts/${this.order_id}`)
                 .then(response => {
                     this.products = response.data.products;
-                    console.log(this.products, 213);
+                    this.products = response.data.products.map(product => ({
+                        ...product,
+                        total_price: product.total_price.toFixed(2)
+                    }));
                 }).catch(error => {
                     console.log(error);
                 });

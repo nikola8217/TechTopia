@@ -7,8 +7,8 @@
                     <div class="row align-items-center">
                         <div class="col-lg-3 col-md-4 col-4">
                             <div class="header-logo">
-                                <a href="index.html" class="logo-main">
-                                    <img src="asset/img/logo.png" loading="lazy" alt="bisum">
+                                <a :href="$router.resolve({name: 'home'}).href" class="logo-main" style="font-size: 32px; color: black">
+                                    Techtopia
                                 </a>
                             </div>
                         </div>
@@ -87,7 +87,7 @@
                         <div class="col-lg-3 col-md-8 col-8">
                             <div class="header-action d-flex align-items-center justify-content-end">
                                 
-                                <a class="header-action-item header-cart ms-4" href="#drawer-cart"
+                                <a v-if="$route.path !== '/checkout' && $route.path !== '/cart' && role_id != '2' && role_id != '3'" class="header-action-item header-cart ms-4" href="#drawer-cart"
                                     data-bs-toggle="offcanvas">
                                     <svg class="icon icon-cart" width="24" height="26" viewBox="0 0 24 26" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">

@@ -136,7 +136,7 @@ export default {
             await axios.get(`/api/products/${this.product_id}`)
                 .then(response => {
                     this.name = response.data.product.name;
-                    this.price = response.data.product.price;
+                    this.price = response.data.product.price.toFixed(2);
                     this.discount = response.data.product.discount;
                     this.price_with_discount = response.data.product.price_with_discount;
                     this.first_img = response.data.product.first_img;

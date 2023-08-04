@@ -1,5 +1,5 @@
 <template>
-    <div class="cart-page mt-100" style="margin-bottom: 700px">
+    <div class="cart-page mt-100" :style="getMarginStyle">
         <div class="container">
             <div class="cart-page-wrapper">
                 <div class="row">
@@ -30,7 +30,7 @@
                                             <input class="qty-input" type="number" name="qty1" v-model="product.quantity">
                                             <button class="qty-btn inc-qty" @click="increase(product)">+</button>
                                         </div>
-                                        <a class="product-remove mt-2" @click="removeFromCart(product)">Remove</a>                           
+                                        <a style="cursor: pointer" class="product-remove mt-2" @click="removeFromCart(product)">Remove</a>                           
                                     </td>
                                     <td class="cart-item-price text-end">
                                         <div class="product-price">{{ (product.quantity * product.price).toFixed(2) }} RSD</div>                           
@@ -61,9 +61,6 @@
                                 <hr />
                                 <div class="d-flex justify-content-center mt-4">
                                     <a :href="$router.resolve({name: 'checkout'}).href" class="position-relative btn-primary text-uppercase">Procced to checkout</a>
-                                    <!-- <a href="checkout.html" class="position-relative btn-primary text-uppercase"> -->
-                                        
-                                    <!-- </a> -->
                                 </div>
                             </div>
                         </div>
@@ -98,7 +95,17 @@ export default {
             deep: true, 
         },
     },
+    computed: {
+        getMarginStyle() {
+            if (this.products.length === 0) {
+                return { marginBottom: '400px' };
+            } else {
+                return { marginBottom: '200px' };
+            }
+        },
+    },
     methods: {
+        
         increase(product) {
             setTimeout(() => {
                 product.quantity++;
@@ -113,6 +120,9 @@ export default {
             }, 100); 
             } else {
                 this.products = this.products.filter((p) => p.id !== product.id);
+                if (this.products.length === 0) {
+                    this.getMarginStyle();
+                }
             }
         },
 
@@ -134,6 +144,9 @@ export default {
         removeFromCart(product) {
             this.products = this.products.filter((p) => p.id !== product.id);
             localStorage.setItem("cart", JSON.stringify(this.products));
+            if (this.products.length === 0) {
+                    this.getMarginStyle();
+            }
         }
     }
 }

@@ -1,5 +1,5 @@
 <template>
-    <div class="cart-page mt-100">
+    <div class="cart-page mt-100" style="margin-bottom: 100px">
         <div class="container">
             <div class="cart-page-wrapper">
                 <div class="row">
@@ -22,7 +22,7 @@
                                         {{ category.id }}
                                     </td>
                                     <td>
-                                        <p @click="navToProducts(category.id)"> {{ category.name }} </p>                                 
+                                        <p style="cursor: pointer" @click="navToProducts(category.id)"> {{ category.name }} </p>                                 
                                     </td>
                                     <td>
                                         <div class="btn-group" style="float: right;">

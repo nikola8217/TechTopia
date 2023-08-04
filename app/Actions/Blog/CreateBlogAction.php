@@ -18,7 +18,7 @@ class CreateBlogAction {
         
         if (Blog::where('title', $request->title)->first()) return response()->json(['error' => 'Blog with this title already exists!']);
 
-        $blog = Blog::createBlog($request->title, $request->img, $request->body);
+        $blog = Blog::createBlog($request->title, $request->body, $request->img);
 
         return response()->json([
             'success' => 'Blog is successfully created!',

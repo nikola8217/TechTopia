@@ -22,7 +22,7 @@
                                 </div>
                                 <div class="product-remove-area d-flex flex-column align-items-end">
                                     <div class="product-price">{{ (product.quantity * product.price).toFixed(2) }} RSD</div>
-                                    <a class="product-remove" @click="removeFromCart(product)">Remove</a>
+                                    <a style="cursor: pointer" class="product-remove" @click="removeFromCart(product)">Remove</a>
                                 </div>
                             </div>
                         </div>
@@ -70,29 +70,37 @@ export default {
         return {
             products: localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [],
             total: 0,
+            total_quantity: 0
         }
     },
     watch: {
         products: {
             handler: function(newProducts) {
                 localStorage.setItem('cart', JSON.stringify(newProducts));
+                setTimeout(() => {
+                    this.calculateSubtotal();
+                }, 100);
+                
             },
             deep: true, 
         },
     },
     methods: {
         increase(product) {
-            product.quantity++; 
-            this.calculateSubtotal();
+            setTimeout(() => {
+                product.quantity++;
+                this.total_with_shipping = (parseFloat(this.total) + parseFloat(this.shipping)).toFixed(2);
+            }, 100);
         },
         decrease(product) {
             if (product.quantity > 1) {
-                product.quantity--; 
+                setTimeout(() => {
+                product.quantity--;
+                this.total_with_shipping = (parseFloat(this.total) + parseFloat(this.shipping)).toFixed(2);
+            }, 100); 
             } else {
                 this.products = this.products.filter((p) => p.id !== product.id);
-                localStorage.setItem("cart", JSON.stringify(this.products));
             }
-            this.calculateSubtotal();
         },
 
         calculateSubtotal() {
@@ -101,7 +109,12 @@ export default {
                     return total + product.quantity * product.price;
                 }, 0);
 
+                const qty = this.products.reduce((total, product) => {
+                    return total + product.quantity;
+                }, 0);
+
                 this.total = subtotal.toFixed(2);
+                this.total_quantity = qty;
             }
         },
 
