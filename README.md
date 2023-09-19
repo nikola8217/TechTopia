@@ -9,7 +9,7 @@ ECommerce web application for technology and technological equipment. Created wi
 1. Guest,
 2. User,
 3. Admin,
-4. Menadzer
+4. Manager
 
 ## Functionality
 
