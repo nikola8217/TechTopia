@@ -1,0 +1,11 @@
+/*!
+  * vue-router v4.2.2
+  * (c) 2023 Eduardo San Martin Morote
+  * @license MIT
+  */
+
+/*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
+
+//! moment.js
+
+//! moment.js locale configuration
