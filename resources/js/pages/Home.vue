@@ -2,7 +2,7 @@
   <div>
     <Corousel />
     <Badges />
-    <Promotions />
+    <!-- <Promotions /> -->
     <LatestProducts />
     <PopularProducts />
     
@@ -13,7 +13,7 @@
 import Corousel from '../components/home/Corousel.vue';
 import Badges from '../components/home/Badges.vue';
 import PopularProducts from '../components/home/PopularProducts.vue';
-import Promotions from '../components/home/Promotions.vue';
+// import Promotions from '../components/home/Promotions.vue';
 import LatestProducts from '../components/home/LatestProducts.vue';
 
 export default {
@@ -21,7 +21,7 @@ export default {
     Corousel,
     Badges,
     PopularProducts,
-    Promotions,
+    // Promotions,
     LatestProducts
   }
 }

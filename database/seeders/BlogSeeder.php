@@ -17,7 +17,7 @@ class BlogSeeder extends Seeder
         $blogs = array(
             array(
                 "title" => 'Exploring the Exciting Features of the iPhone 14 Pro: A Glimpse into the Future',
-                "img" => "../images/blog1.avif",
+                "img" => "../images/blog4.jpg",
                 "body" => "Apple has once again set the tech world abuzz with the release of their highly anticipated flagship smartphone, 
                 the iPhone 14 Pro. Packed with cutting-edge features and innovative advancements, this device is poised to redefine the smartphone 
                 experience. In this blog, we delve into the standout features of the iPhone 14 Pro and explore why it's generating so much 
@@ -51,7 +51,7 @@ class BlogSeeder extends Seeder
             ),
             array(
                 "title" => 'Unleashing Creativity and Performance: A Closer Look at the New MacBook Pro',
-                "img" => "../images/blog2.avif",
+                "img" => "../images/blog5.jpg",
                 "body" => "Apple's MacBook Pro has long been the go-to choice for professionals and creatives seeking powerful performance and 
                 unmatched user experience. With the recent release of the new MacBook Pro, Apple has once again raised the bar in the world of 
                 laptops. In this blog, we'll explore the exceptional features of the new MacBook Pro and discuss why it's the ultimate tool 
@@ -88,7 +88,7 @@ class BlogSeeder extends Seeder
             ),
             array(
                 "title" => 'Unleashing the Future of Gaming: Exploring the Powerhouse That is the PlayStation 5',
-                "img" => "../images/blog3.avif",
+                "img" => "../images/blog6.jpg",
                 "body" => "The PlayStation 5 (PS5) has taken the gaming world by storm since its highly anticipated release. With its cutting-edge 
                 hardware, innovative features, and a library of stunning games, the PS5 represents a significant leap forward in the world of console 
                 gaming. In this blog, we'll delve into the impressive features of the PlayStation 5 and discuss why it's a must-have for gamers 

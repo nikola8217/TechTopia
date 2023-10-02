@@ -24,7 +24,7 @@
                     </div>
                     <div class="col-lg-6 col-md-12 col-12">
                         <div class="about-hero-img">
-                            <img src="images/about2.avif" alt="img" style="width: 100%">
+                            <img src="images/about4.jpg" alt="img" style="width: 100%">
                         </div>
                     </div>
                 </div>

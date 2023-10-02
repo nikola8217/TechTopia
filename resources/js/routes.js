@@ -22,7 +22,8 @@ import Checkout from './pages/Checkout.vue';
 import Orders from './pages/manager/Orders.vue';
 import OrderDetails from './pages/manager/OrderDetails.vue';
 import Profile from './pages/Profile.vue';
-import { checkIsAuth, checkIsGuest, checkIsAdmin, checkIsManager, checkIsGuestOrUser } from './protection.js';
+import NotFound from './pages/NotFound.vue';
+import { checkIsAuth, checkIsGuest, checkIsAdmin, checkIsManager, checkIsGuestOrUser, checkIsUserOrManager } from './protection.js';
 
 const routes = [
   {
@@ -162,13 +163,18 @@ const routes = [
     path: '/orders/:id',
     component: OrderDetails,
     name: 'orderDetails',
-    beforeEnter: checkIsManager
+    beforeEnter: checkIsUserOrManager
   },
   {
     path: '/profile',
     component: Profile,
     name: 'profile',
     beforeEnter: checkIsAuth
+  },
+  {
+    path: '/:catchAll(.*)',
+    component: NotFound,
+    name: 'notFound',
   },
 ];
 

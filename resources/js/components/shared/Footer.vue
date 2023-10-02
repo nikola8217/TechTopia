@@ -1,5 +1,5 @@
 <template>
-    <footer v-if="!role_id || (role_id && role_id === '1')" class="mt-100 overflow-hidden">
+    <footer v-if="!role_id || (role_id && role_id === '1')" class="mt-100 overflow-hidden" >
         <div class="footer-bottom bg-4">
             <div class="container">
                 <div

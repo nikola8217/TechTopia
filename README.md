@@ -57,4 +57,4 @@ You can check my application [here](https://techtopia.nonis.rs/).
 
 ## Index page
 
-![Index page](./public/images/preview.png)
+![Index page](./public/images/preview1.png)

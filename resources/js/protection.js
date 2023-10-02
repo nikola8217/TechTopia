@@ -60,10 +60,21 @@ function checkIsAuth(to, from, next) {
     }
   }
 
+  function checkIsUserOrManager(to, from, next) {
+    if (!userRole) {
+      next('/login');
+    } else if (userRole && userRole === '2') {
+      next('/users');
+    } else {
+      next();
+    }
+  }
+
   export {
     checkIsAuth,
     checkIsGuest,
     checkIsAdmin,
     checkIsManager,
-    checkIsGuestOrUser
+    checkIsGuestOrUser,
+    checkIsUserOrManager
   }

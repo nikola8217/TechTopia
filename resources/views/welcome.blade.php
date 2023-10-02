@@ -74,7 +74,7 @@
                         
                 <header-component></header-component>
                 <div class="body-wrapper">
-                    <router-view :key="$route.fullPath"></router-view>
+                    <router-view :key="$route.fullPath" style="min-height: 100vh"></router-view>
                 </div>
                 <footer-component></footer-component>
             </div>
