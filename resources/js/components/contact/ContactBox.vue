@@ -26,7 +26,8 @@
                             </div>
                             <div class="contact-details">
                                 <h2 class="contact-title">Office Location</h2>
-                                <p class="contact-info">Novaka Djokovica 85, 11000 Beograd</p>
+                                <p class="contact-info">Novaka Djokovica 85,</p>
+                                <p class="contact-info">11000 Beograd</p>
                             </div>
                         </div>
                     </div>
